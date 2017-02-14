@@ -1,0 +1,69 @@
+﻿
+img {
+	border: 0;
+}
+.b-carousel  {
+	width: 98%; /* ширина всего блока */
+	margin:50px auto;
+	
+	height:auto;	
+}
+	.h-carousel-wrapper {
+		width:100%; /* ширина области карусели */
+		overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
+		margin: 0 auto; /* выравниваем по центру относительно родительского блока */
+		float:left;
+	}
+		.h-carousel-items {
+			width: 100000px; /* устанавливаем большую ширину для набора элементов карусели, чтобы в неё всё поместилось */
+			position: relative; /* позиционируем блок относительно основной области карусели */
+		}
+			.b-carousel-block {
+				float: left; /* выстраиваем все элементы карусели в ряд */
+				margin-right: 20px; /* делаем оступы, чтобы элементы не сливались */
+				
+			}
+			
+				.a-carousel-image-link { /* тут чисто оформление содержимого */
+					display: block;
+					max-width: 100%;
+					height:305px;
+					
+					}
+				
+				.a-carousel-image-link div{
+				background:url(img/thumbs/bg.png);
+				width:100%;
+				height:305px;
+				position:relative;
+				top:-309px;
+				z-index:100;
+				opacity:0
+				}
+			.a-carousel-image-link div:hover{opacity:0.8}
+	.b-carousel-button-left, .b-carousel-button-right {
+		width: 45px; /* задаем ширину кнопок */
+		height:50px;
+		display:block;
+		color:white;
+		float:right; /* выравниваем правую кнопку по правому краю */
+		cursor: pointer; /* делаем кнопкам курсор в виде "пальца" */
+		position:relative;
+		
+	}
+	.b-carousel-button-left {
+			background: url(img/galleryNav.gif) 0px 0 no-repeat; /* картинка с левой кнопкой */
+		
+	}
+	.b-carousel-button-left:hover {
+			background: url(img/galleryNav.gif) 0px 100% no-repeat; 
+		
+	}
+	.b-carousel-button-right {
+			background: url(img/galleryNav.gif) -47px 0 no-repeat; /* картинка с правой кнопкой */
+	}	
+
+	.b-carousel-button-right:hover {
+			background: url(img/galleryNav.gif)-47px 100% no-repeat; 
+	}	
+		

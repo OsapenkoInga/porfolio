@@ -1,0 +1,688 @@
+ @font-face {
+    font-family:Bebas; 
+    src: url(BEBAS___.ttf);
+   } 
+.rotate-keyframes{ 
+	from { 
+		transform:  rotate(0);
+	}	
+	to {
+		transform: rotate(360deg);
+	}
+	} 
+@-webkit-keyframes rotate {.rotate-keyframes;}
+@-moz-keyframes rotate {.rotate-keyframes;}
+@-ms-keyframes rotate {.rotate-keyframes;}
+@-o-keyframes rotate {.rotate-keyframes;}
+@keyframes rotate {.rotate-keyframes;}	
+
+.increase-keyframes { 
+	from { 
+		transform:scale(1.2);
+	}	
+	to {
+		transform:scale(1);
+	}
+	} 
+@-webkit-keyframes increase {.increase-keyframes;}
+@-moz-keyframes increase {.increase-keyframes;}
+@-ms-keyframes increase {.increase-keyframes;}
+@-o-keyframes increase {.increase-keyframes;}
+@keyframes increase {.increase-keyframes;}	
+	
+.animation(@name:rotate, @duration:1s, @count:1, @delay:1s, @function:linear) {//описание анимации поворота букв 
+    -webkit-animation-name: @name;
+    -moz-animation-name: @name;
+    -ms-animation-name: @name;
+    -o-animation-name: @name;
+    animation-name: @name;
+    -webkit-animation-duration: @duration;
+    -moz-animation-duration: @duration;
+    -ms-animation-duration: @duration;
+    -o-animation-duration: @duration;
+    animation-duration: @duration;
+    -webkit-animation-iteration-count: @count;
+    -moz-animation-iteration-count: @count;
+    -ms-animation-iteration-count: @count;
+    -o-animation-iteration-count: @count;
+    animation-iteration-count: @count;
+   	-webkit-animation-delay:@delay;
+	-moz-animation-delay:@delay;
+	-ms-animation-delay:@delay;
+	 -o-animation-delay:@delay;
+    -webkit-animation-timing-function: @function;
+    -moz-animation-timing-function: @function;
+    -ms-animation-timing-function: @function;
+    -o-animation-timing-function: @function;
+    animation-timing-function: @function;
+} 
+@bg_color:#38291a;//цвет фона
+@color_green:#a7a20c;
+@color_text:#ffffff;
+@color_title:#82683B;
+@color_text_footer:#81673A;
+@section_color:#493621;
+
+.ico(@height, @width){		//задание высоты для иконки
+		height:@height;
+		width:@width;
+
+	}		
+.text_decor(@color:@color_text_footer, @style:normal, @size:0.9em, @family:georgia){
+    //описание стиля шрифта
+		color:@color;
+		font-style:@style;
+		font-size:@size;
+		font-family:@family
+		}
+.decoration(@decor:none){	//подчеркивание текста(по умолчанию- без эфектов)
+	text-decoration:@decor;
+	}	
+.text{	
+		.text_decor(@color:@color_title, @size:1.6em, @family:Cuprum);
+			span{
+				display:block;
+				margin-top:6px;
+				}	
+		}	
+.green_border(@top, @left){		//	задание зеленой рамка в 10пх вокруг элемента
+	outline:10px solid @color_green;
+	position:absolute;
+	top:@top;
+	left:@left;
+	opacity:0;	
+	}	
+.green_dotted{border-bottom:1px dotted @color_green;}
+.green_link{			//нижнее подчеркивание ссылки
+	a{
+		.text_decor(@color:@color_green, @style:normal, @size:1.2em,@family:Helvetica );
+	}
+	a:hover{//при наведении мыши,изменяется нижняя рамка
+		.green_dotted;
+		.decoration(@decor:none);
+	}
+}
+.skipe{						//стиль для номера skipe
+	img{
+		width:1em;
+		}
+	span{
+		.text_decor(@color:#18aaee, @family:Helvetica);
+		display:inline;
+		}
+	span:hover{	
+		border-bottom:1px solid #18aaee;
+		}	
+}
+.button{										//стиль для кнопок
+	background:@color_title;
+	.text_decor(@color:@color_text,@family:Helvetica );
+	padding:6px 10px 6px 20px;
+	border-radius: 5px;
+	-webkit- border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.ul_hours{                          //стиль списка двухцветного
+		margin:0px;
+		padding:0px;	
+				li{
+					list-style-type: none;//убрать меркеры
+					clear:both;//запретить обтекание
+					.text_decor(@color:@color_text, @style:normal, @size:0.9em, @family:georgia);
+					padding:10px;
+				}
+				li:nth-child(2n){ //цвет парных элементов списка
+					background:@section_color;
+				}	
+}
+body{ //стиль документа
+	background:@bg_color;//фон документа
+	width:100%;
+	font-size:100%;
+	margin:0px;
+	padding:0px;
+	}
+	
+header,article,footer{//блоки отцентрированы по горизонтали
+ 	width:71.7%;
+	margin:auto;
+	}	
+
+a{								//ссылки без подчеркивания
+	.decoration		
+ 
+	}
+		
+span{  											//стиль для текста
+	.text_decor(@color:@color_text, @style:italic);
+	line-height:1.5;//межстрочный интервал
+	}
+header{margin-top:40px;	}//шапка с верхним отступом
+header	table { //стиль логотипа
+		width:22.2%;
+		border-collapse: collapse; 
+		padding:0px;
+		float:left;
+		margin-right:12.5%;
+		margin-bottom:0.8%;
+			 tr td{//ширина буквы логотипа
+				width:33%;
+				padding:1%;
+				}
+			 img {  
+				width: 100%; 
+				} 
+			
+			 tr:last-child {//стиль для текста логотипа
+				font-size:21px;
+				font-size:1.3rem;
+				font-family:Bebas;
+				color:@color_green;
+				margin-top:0px;
+				letter-spacing:0.25em;//интервал между символами
+				word-spacing:0.9em;//интервал между словами
+				}
+			
+		} 
+header	table:hover{//стиль логотипа, при наведении мыши
+			tr:first-child td:first-child{
+				.animation(@delay:0s);//анимация первой буквы
+			}
+			tr:first-child td{
+				.animation;//анимация второй буквы
+				height: auto;
+				}
+			tr:first-child td:nth-child(3){
+				.animation(@delay:2s);//анимация третей буквы
+				}
+			tr:last-child {//анимация текста
+				.animation(@name:increase, @delay:0s, @function:ease);
+				}		
+	}
+ header ul li{	//стиль пункта меню	
+			display:inline;//элемент списка строчный
+				 span{	//описание текста 
+					margin-top:40px;
+					margin-left:-100px;
+					width:90px;
+					display:inline-table;
+					float:left;
+					opacity:0;//текст невидимый
+				
+					}
+				a{//стиль пункта меню(ссылки)
+					.text_decor(@color:@color_text, @size:1.3rem, @family:Cuprum);
+					border-bottom:4px solid #66512f;//нижняя рамка
+					text-transform: uppercase;//все буквы Большие
+					padding-right:3rem;
+					padding-bottom:0.4rem;
+					display:block;
+					float:left;
+					
+					}
+			}
+ header ul li:nth-child(4) span{//сдвиг в лево текста в четвертом пункте меню
+					margin-left:-160px;
+				}
+ header ul li:hover{
+				span{
+					opacity:1;//при наведении тект становится видимым
+				}
+				a{
+					color: @color_green;//при наведении пункт меню меняет цвет на зеленый
+					border-bottom:4px solid @color_green;//нижнее подчеркивание меняетсяна зеленое
+				}
+				}				
+
+				
+article{
+				
+			p{
+				float:left;
+				margin-top:0;
+				margin-left:1%;
+				margin-right:12%;
+				
+				.text;
+					span{
+						.text_decor(@color:@color_text, @style:italic, @size:0.55em, );
+						}
+			}	
+		}
+article section{
+		>div.line{
+				background:url(img/shelfshadow.gif)0 100% repeat-x;
+				width:100%;
+				height:10px;
+				padding-top:45px;
+				margin-bottom:20px;
+				clear:both;
+		}
+}
+
+article section.menus{  //стиль секции menus
+		position:relative;
+	>p{
+		margin-top:22px;
+	}
+	ul {//стиль списка
+		width:100%;
+		margin:0px;
+		padding:0px;
+					
+		li{ //стиль разделов меню ресторана
+				display:inline-block;
+				width:31%;//ширина элемента
+				float:left;//левосторонее позиционирование
+				margin-right:17px;
+				margin-top:22px;
+				min-width:300px;//минимальная ширина элемента
+				position:relative;
+			p{
+				text-transform: uppercase;//большие буквы
+				margin:0;
+				margin-bottom:14px;
+			}
+			
+			div{//стиль блока с картинкой
+					width:280px;
+					height:96px;
+					.green_border(@top:11px, @left:10px);//рамка вокруг картинки(невидимая)
+					margin-top:42px;
+					
+		
+				img{
+					
+					
+					}
+			}	
+			div:hover{opacity:0.5;}//при наведении мыши рамку становится видно
+			div:hover + a{background:@color_green;}//при наведении мыши на картинку  кнопка меняет цвет
+			a{
+					.button;//стиль кнопки
+					
+					
+				img{
+						margin-top:30px;//размещение кнопки внутри кнопки-ссылки						
+					}
+			}
+			a:hover{background:@color_green;}//при наведении на кнопку, она менят цвет
+					
+			}
+		li:last-child{ //стиль последнего раздела
+			float:right;
+			margin-right:34px;
+			margin-top:40px;
+			}		
+		}	
+	}
+article section.about{ //описание секции about
+			width:120%;
+			>p{width:72%;}
+		section{    //описание стиля подсекции
+				>div{
+                    //описание блока информации
+					width:80%;
+					float:left;
+					margin-bottom:-4%;
+                    margin-top:3%;
+					min-width:300px;
+									
+					p:first-child{//название блока большими буквами
+						text-transform: uppercase;
+						margin-bottom:5px;
+					}
+					
+					img{//картинка блока слева
+						float:left;
+						margin-right:2.5%;
+					}
+					span{//стиль текста-описания
+						font-style:normal;
+						margin-top:0px;
+						margin-bottom:25px;
+						a{//ссылки зеленого цвета
+							color:@color_green;
+							.decoration(@decor:underline);
+							}
+						a:hover{//при наведении мыши, ныжнее подчеркивание становится пунктирным
+							.green_dotted;
+							.decoration(@decor:none);
+							}
+						}
+						
+					}
+				}
+			ul{ //стиль списка-колонки 
+				float:left;
+				list-style-type: none;//убираем маркеры	
+				margin:0;
+				padding:0;
+				width:150px;//ширина колонки
+				margin-top:-61.5%;
+				margin-left:-4%;
+
+				li {
+					position:relative;
+					a:hover p{.green_dotted ;}//нижнее пунктирное подчеркивание, при наведении мыши на текст
+					a:hover div{opacity:0.5;}//рамка полупрозрачная
+					
+					p{
+						text-transform:uppercase;	//текст большими буквами
+						.text_decor(@color:@color_green, @style:normal, @size:1em, @family:Verdana);//стиль текста
+						padding:0px;
+						margin:0px;
+						}
+					img{//отступы картинки
+					margin-top:20px;
+					margin-bottom:5px;
+					}	
+					div{//описание блока-рамки,которая по-умолчанию прозрачная
+					width:130px;
+					height:130px;					
+					.green_border(@top:30px, @left:10px);//поднята на 30px относительно родительського блока
+						}
+	
+					}
+				li:nth-child(2)	div{//рамка у второго элемента списка поднята на 64px относительно родительського блока
+				top:64px;
+					}
+					
+
+				li p:first-child{//стиль блока с названием колонки
+					.text;
+						span{
+							.text_decor(@color:@color_text, @style:italic, @size:0.55em );
+							}
+					margin-bottom:5px;		
+						}	
+				
+				}
+	}
+article section.press{ //описание секции press
+		width:110%;//ширина секции
+		float:left;
+		>div{
+			width:60%;//ширина блока с новостями
+			
+			
+			p{
+				width:100%;
+				
+				img{
+					float:left;//картинка новости по левому краю
+					margin-right:10px;	
+				}
+				span{
+				overflow:hidden;
+				margin-top:2px;
+				min-width:200px;
+				.green_link	//название новости зеленым цветом,при наведении мыши,появляется нижнее пунктирное подчеркивание
+				}
+				a>span{//стиль даты публикации новости
+						.decoration(@decor:none);	//убираем подчеркивание 
+						.text_decor(@color:@color_title, @style:italic, @size:0.7em, );//стиль текста
+					}
+			}
+		}
+		
+		
+		>section{//секция-колонка
+			width:27.5%;//ширина колонки
+			float:right;//колонка справа
+			background:@section_color;//цвет колонки
+			margin-top:-135%;
+			padding-left:1.5%;
+			padding-top:2%;
+			p{//стиль текста в колонке
+				.text_decor(@color:@color_text, @size:1.3em, @family:Cuprum);
+				span{
+					.text_decor(@color:@color_text, @style:normal, @size:0.65em,@family:georgia );
+					.green_link	//подчеркивание при наведении мыши 
+				}
+			
+			}
+			div.line{//стиль блока с линией
+				background:url(img/quicklookshadow.gif)0 100% repeat-x;//картинка, создающая линию
+				width:90%;//шириноблока с лнией
+				height:10px;
+				margin-bottom:32px;
+                clear:both;//отменить обтекание
+			}
+			p:last-child{//стиль блока-архива(последнего параграфа секции)
+				a{
+					display:block;//каждая ссылка с новой строки
+					margin-left:30px;
+					margin-top:5px;
+				}
+			}
+		}
+}	
+
+article section.reservation{ //описание секции reservation
+	width:100%;
+	clear:both;//отенить обтекание
+	p{ //стиль колонок
+		width:30%;//ширина колонки
+		margin:0;
+		margin-left:20px;
+		padding-right:10px;
+			span{
+			font-style:normal;
+			margin-bottom:20px;	
+			margin-top:15px;
+			}
+			a{
+			.skipe;//стиль для номера скайп
+			}
+
+		}
+	p:nth-child(2){//стиль 2-й колонки
+		span+a{//стиль кнопки
+			.button;
+			font-size:0.5em;
+		}
+		span+a:hover{//при наведении мыши кнопка меняет цвет
+			background:@color_green;
+		}
+	}
+	ul{//стиль двухцветного списка
+			.ul_hours;
+			width:300px; //ширина списка	
+			float:left;
+			margin-left:20px;
+			
+	}
+}
+article section.contact{//описание секции contact
+		clear:both;//запретить обтекание
+		width:100%;
+		>p{//описание блока с картой
+			width:55%;//ширина блока
+			float:left;//по левому краю
+			
+			iframe{//карта
+				display:block;
+				margin-top:20px;
+			}
+		}
+		>div{ // описание блока справа от карты
+			width:300px;//ширина блока
+			overflow:hidden;//отображается вся область внутри элемента
+			padding:0px;
+			padding-top:30px;
+			span{
+				font-style:normal;
+			}
+			p{
+				width:100%;
+				>a{//стиль кнопки
+					.button;
+					font-size:0.5em;
+					position:relative;
+					top:10px;
+				}
+				>a:hover{//при наведении мыши кнопка меняет цвет
+					background:@color_green;
+				}
+			}
+			>p:first-child{
+				span{
+					float:left;
+					font-weight:normal;
+				}
+				a{left:15px;}
+			}	
+			
+			p:nth-child(2){
+				span{
+					font-weight:bold;
+					a{
+						color:@color_green;
+						font-weight:normal;
+					}
+					a:hover{
+						.green_dotted;
+					}	
+
+					span{
+						.text_decor(@size:1em, @style:italic);
+						font-weight:normal;
+						
+					}
+				}
+				span:first-child{
+					a{
+						.skipe
+					}
+				}
+			}
+			p:nth-child(4){
+				
+				>span a{
+						.skipe;
+				}
+				>a{top:25px;}
+				
+			}
+			p:nth-child(5){			
+				margin-top:30px;
+				margin-bottom:-5px;	
+					}
+			ul{
+				.ul_hours;
+			}				
+			>div{
+				clear:both;
+				width:100%;
+				height:66px;
+					>a{
+					float:left;
+					margin-left:10px;
+					margin-right:10px;
+					margin-bottom:30px;
+					.ico(@height:66px, @width:66px);
+					}
+				>a:first-child{
+					background:url(img/ico1.png);
+
+					}		
+					
+				>a:first-child:hover{
+					background:url(img/ico1_1.png);
+					
+					}
+				>a:last-child{
+					background:url(img/ico2.png);
+					
+					}	
+				>a:last-child:hover{
+					background:url(img/ico2_1.png);
+					}		
+			}
+		}
+}
+footer{//стиль подвала сайта
+		
+			div.line{//описание линии вверху подвала
+				background:url(img/shelfshadow.gif)0 100% repeat-x;//изображение линии(повторять по горизонтали)
+				width:100%;
+				height:10px;
+				margin-top:45px;
+				margin-bottom:20px;
+		}
+		div{
+			float:left;
+			margin-top:-1%;
+			
+			 p{
+				
+				.text_decor(@size:0.7em, @family:helvetica);
+				line-height:2;
+					a{
+						color:@color_text_footer;
+						}
+					a:hover{
+						color:@color_green;
+						.green_dotted;
+						.decoration(@decor:none);
+						}
+				}
+			p:first-child{//стиль первого блака подвала
+						.text_decor(@style:italic);
+						
+						a:first-child{
+							color:@color_green;
+							.decoration(@decor:underline);
+							}
+						a:first-child:hover{
+							.decoration;
+							}	
+						a:last-child:hover{
+							.green_dotted;
+							}
+						a{
+							.skipe
+						}	
+						
+						}
+			p:nth-child(2){//стиль второго блока подвала
+				a{
+					.decoration(@decor:underline);
+				}
+			}
+		
+			
+		}
+		div:last-child{
+				margin-left:25%;//розмещение социконок
+				margin-top:2%;
+				}		
+        >a{//стиль социконок
+				display:block;
+				float:left;
+				background-size:100%;
+				.ico(@height:43px, @width:43px);//размер иконок
+				
+				}
+			>a:first-child{
+				background:url(img/ico1.png);//первая иконка до наведения мыши
+				margin-left:-20px;
+				
+				margin-right:10px;
+				}
+			>a:first-child:hover{
+				background:url(img/ico1_1.png);//первая иконка после наведения мыши
+				
+				}
+			>a:last-child{
+				background:url(img/ico2.png);//вторая иконка до наведения мыши
+				
+				}	
+			>a:last-child:hover{
+				background:url(img/ico2_1.png);//вторая иконка после наведения мыши
+				
+				}		
+		}
+		
+		
