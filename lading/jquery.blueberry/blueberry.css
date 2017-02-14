@@ -1,0 +1,50 @@
+
+
+.blueberry { margin: 0 auto; 
+			max-width: 1200px;
+			margin-top:40px;}
+.blueberry .slides {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	
+}
+.blueberry .slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.blueberry .slides li img {
+	display: inline-block;
+	width: 24%;
+	max-width: none;
+}
+.blueberry .slides li.active { display: block; position: relative; }
+.blueberry .crop li img { width: auto; }
+
+.blueberry .pager {
+	height: 40px;
+	text-align: center;
+}
+.blueberry .pager li { display: inline-block; }
+.blueberry .pager li a,
+.blueberry .pager li a span {
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+.blueberry .pager li a {
+	padding: 18px 8px;
+
+}
+.blueberry .pager li a span {
+	overflow: hidden;
+	background: #451f6d;
+	text-indent: -9999px;
+-webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px solid black;
+}
+.blueberry .pager li.active a span { background: #1cb100; }
