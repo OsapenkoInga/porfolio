@@ -1,0 +1,520 @@
+	
+body{
+	margin:0;
+	padding:0;
+	background:url(img/bg-1.jpg);/*фоновое изображение страницы*/
+	}
+	
+body>img{/*размещение иображения поверх фонового*/
+	margin-top:500px;
+	float:left;
+	
+} 
+aside{/*описание блока слева страницы*/
+	position:relative;
+	z-index:100;
+	width:258px;
+	height:800px;
+	background:url(img/aside-bg.png);/*фоновое изображение блока*/
+	box-shadow: 0px 0px 4px 4px rgba(0,0,0,.4),0 0 30px 10px rgba(0,0,0,.3) inset;/*описание тени блока*/
+	float:left;
+	}
+	
+aside header img{/*размещение логотипа*/
+	margin:20px 20px 0px 20px;
+	}
+aside nav{/*размещение блока с меню*/
+	margin:100px 19px 0px 19px;
+	}
+aside nav>ul{ /*описание списка-меню*/
+	text-align:center;
+	padding:0px;
+	position: relative;
+	float:left;
+	 }	
+aside nav>ul>li{/*описание пункта меню*/
+	width:220px;
+	height:33px;
+	list-style-type:none;/*убираем маркеры*/
+	padding-top:17px;
+	
+	 }
+aside nav>ul>li:hover {/*описание пункта меню при наведении мыши*/
+	background:url(img/nav-hvr-bg.png);/*фоновое изображение*/
+	border-radius:5px;/*округление углов*/
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.8);/*тень*/
+	 }	 
+aside nav ul>li>a{/*описание ссылки внутри элемента списка-меню*/
+    display:block;
+    	width:220px;
+        height:20px;
+        margin-top:-14px;
+        padding-top:13px;
+	color:#e5e1de;/*цвет текста меню*/
+	text-decoration: none;
+	font-family:'Open Sans', sans-serif;
+	font-size:15px/50px;
+	font-weight: bold;
+	
+	}
+aside nav ul>li>img{/*линия внизу пункта меню видимая*/
+	opacity: 1;
+	margin-bottom:2px;
+	}	
+aside nav ul>li:hover img{opacity: 0;}	/*при наведении мыши, линия внизу пункта меню становится невидимой*/
+aside nav>ul>li:hover>ul, aside nav>ul>li>ul>li:hover>ul{display:block}/*при наведении мыши, всплывает блок с подменю*/
+aside nav>ul>li>ul{/*описание  блока с подменю*/
+	display:none;/*изначально удален*/
+	width:130px;
+	height:120px;
+	position:absolute;/*позиционирование относительно верхнего списка*/
+	float:left;
+	z-index:3;/*поверх верхнего списка*/
+	left: 156px;
+	top: 90px;
+	padding:0px;
+	background:url(img/blok.gif);/*фон подменю*/
+	background-repeat:no-repeat;
+	padding-top:21px;
+	}
+aside nav>ul>li>ul li{
+	list-style-type:none;/*убираем маркеры*/
+	text-align:left;
+	padding-left:10px;
+	line-height:23px;
+
+	
+	}
+aside nav>ul>li>ul>li a{
+
+	width:110px;
+	font-size:11px;
+	font-family:Arial;
+	color:#82746f;
+	font-weight: normal;
+	border-bottom:1px dotted #484444;
+	padding-bottom:5px;
+	
+	}
+
+aside nav>ul>li>ul>li:hover>a, aside nav>ul>li>ul>li>ul>li:hover>a{color:#f2f2cb;}	/*при наведении мыши текст в подменю меняет цвет*/
+
+aside nav>ul>li>ul>li>ul{
+	 display:none;
+	 position:absolute;
+	 float:left;
+	 z-index:3;
+	 left: 111px;
+	 top: 27px;
+	 padding:0px;
+	 background:url(img/blok1.gif);
+	 background-repeat:no-repeat;
+	 width:112px;
+	 text-align:left
+	 }	
+
+aside footer ul{/*описание списка социконок*/
+	list-style: none;
+	margin-left:13px;
+	}
+aside footer ul li{/*описание элемента списка социконок*/
+	width:30px;
+	height:60px;
+	display: inline-block;/*в одну линию*/
+	
+	margin:0px;
+	padding:0px;
+	margin-top:20px;
+	margin-right:6px;
+	margin-bottom:-60px;
+	}
+
+
+	
+aside footer>div{
+	color:#f1f0db;
+	border-top:1px solid #59524e;
+	border-bottom:1px solid #59524e;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:17px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	
+	}
+aside footer div a{
+	color:#f1f0db;
+	
+}	
+
+article {
+    /*описание блока article*/
+	width:741px;
+	height:800px;
+	float:left;
+	background:url(img/content-bg.png); /*фоновое изображение*/
+	
+	overflow:hidden;
+	position:absolute;
+	left:258px; /*сдвиг блока вправо*/
+
+	}
+
+article section{
+    /*описание секций в article*/
+	height:800px;
+    margin-left:47px;
+	}	
+article  p {	
+	color:#e5e1de;
+	font: italic 15px/22px 'Open Sans', sans-serif;
+	}
+article span{
+	font: 12px/1.2em Arial, Helvetica, sans-serif;
+	color: #82746f;
+	display: block;
+	font-weight:normal;
+	}
+article h3{
+    /*описание заголовка сайта*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	line-height: 1.2em;
+	color: #bbb4b0;
+	
+	font-weight:normal;
+	}
+article div.lin{
+    /*описание линии*/
+	width:668px;
+	height:1px;
+	background:#403d3c;
+	margin-top:85px;
+	}
+article a.button{
+    /*описание кнопок сайта*/
+	width:95px;
+	background:url(img/btn-bg.png);/*фоновое изображение кнопки*/
+	text-decoration: none;
+	padding:11px 15px 11px 15px;
+	color:#e5e1de;
+	box-shadow: 1px 1px 1px 0 rgba(0,0,0,.4);/*тень*/
+	border-radius:3px; /*скругление углов*/
+	}
+article a.button:hover{	
+    /*изменение цветов кнопки при наведении мыши*/
+	background:#d3cdca;
+	color:#50443d;
+	}	
+article  a.white {
+	color:#f1f0db;
+	}
+article .home>p{
+padding-top:112px;
+	
+}	
+article .home img{
+	float:left;
+	
+	padding-top:4px;
+	}
+article .home p>img{
+	/*описание первой картинки в секции*/
+	margin-right:20px;
+	box-shadow: 0 0 6px 0 rgba(0,0,0,.6);/*тень*/
+	padding-top:0px;
+	}
+article .home>p {
+	margin-top:110px;
+	margin-right:20px;
+	}
+article .home p>span{
+    /*описание элемента с пописью*/
+	font-weight: bold;
+	padding-top:25px;
+	}
+article .home p>span>img{
+    /*описание картинки с подписью*/
+	position:relative;
+	left:430px;
+	bottom:45px;
+	clear:both;
+	}
+article .home div.block{
+    /*описание div.block*/
+	width:304px;
+	height:100px;
+	float:left;
+	margin:3px 15px 37px 0px;
+	}
+article .home div.block:nth-child(2n+1){
+    /*задано отступ для парных div.block*/
+   margin-left:33px;
+   
+}
+article .home div.block img{
+    /*описание картинки внутри div.block*/
+	margin:0;
+	display: block;
+	}
+article .home div.block p {
+    /*описание размещения текста внутри div.block*/
+	margin:0px; 
+	padding:0 0 0 120px;
+	line-height: 18px;
+	
+	}
+article .home div.block p span {
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+	}
+article .about_us div img{
+ /*нижний отступ блока с изображениями*/
+    margin-bottom:20px;
+}	
+article .about_us img.img2{
+    /*левый отступ 2-й картинки блока*/
+	margin-left:15px;
+	
+	}
+article .about_us p{
+    /*отступы параграфа с текстом*/
+	margin-right:20px;
+    padding-bottom:20px;
+	}
+article .about_us span{
+	padding-top:17px;
+	padding-bottom:5px;
+	}
+article .about_us div.lin{
+    /*отступы в блокас линией*/
+	margin-top:23px;
+	margin-bottom:26px;
+	}
+
+article .about_us ul{
+    /*описание списка с изображениями*/
+	padding:0px;
+	float:left;
+    margin:0px;
+   
+	}	
+article .about_us ul li{
+    /*описание элементов списка с изображениями*/
+	list-style-type:none;
+	display:block;
+	float:left;
+	margin:0px;
+	padding:0px;
+	margin-right:20px;
+    
+	}
+article .about_us ul li :last-of-type{
+    /*правый отступ последнего элемента списка*/
+	margin-right:0px;
+	}	
+	
+article .about_us ul li span{	
+	padding-top:5px;
+	}	
+
+article .services h3{
+	/*нижний отступ заголовка*/
+	margin-bottom:35px;
+	
+	}	
+article .services  span{
+	
+	padding-top:5px;
+	}
+article .services table {	
+    /*описание таблиц*/
+	float:left;
+	width:310px;
+	}
+    article .services table:nth-child(2n+1),  article .services table:last-of-type {
+        /*левый отступ непарных таблиц и последней*/
+        margin-left:40px;
+    }
+    
+article .services table th{	
+    /*заголовок таблицы по левому краю*/
+	text-align:left;
+	}	
+article .services table tr{	
+    /*высота строки таблицы и тень*/
+	height:30px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.6);
+	}
+article .services table tr.fon_1{	
+    /*фон строк таблицы класса .fon_1*/
+	background: #d6d1ce;
+	
+	}
+article .services table tr.fon_2{
+    /*фон строк таблицы класса .fon_2*/	
+	background: #312b29;
+	
+	}
+
+article .services table tr td {	
+    /*текст в ячейках таблицы по правому краю*/ 
+	text-align:right;
+	
+	}	
+article .services table tr td span{	
+	/*описание элемента span в ячейке таблицы*/
+	margin-left:10px;
+	padding:0px;
+	text-align:left; /*текст по левому краю*/
+	}
+article .services table tr td  b{	
+	font: 12px/1.2em Arial, Helvetica, sans-serif;
+	color: #82746f;
+	margin-right:10px;
+	}
+article .gallery h3{
+	/*нижний отступ у заголовка*/
+	margin-bottom:10px;
+	
+	}
+article .gallery div.big {
+    /*отступы в блоке с большой картинкой*/
+        margin:40px 0px;
+    }
+article .gallery div.parent {
+    /*стили блока со списком  изображений-миниатюр*/
+        position:relative;
+        overflow:hidden;
+        height:101px;
+    }
+article .gallery ul.small{
+    /*стили списка с миниатюрами*/
+        position:absolute;
+        padding:0px;
+       
+        
+    }
+article .gallery ul.small li{
+    /*стили для элемента списка*/
+       margin-right:16px;
+    list-style-type: none; /*убираем маркеры*/
+    display:inline-block; /*в один ряд*/  
+    }	
+article .gallery div.prev{
+    /*стили кнопки "влево"*/
+    display:inline-block;
+    background-image:url(img/ad_scroll_back1.png);
+    width:41px;
+    height:41px;
+    margin-top:20px;
+}
+article .gallery div.next{
+      /*стили кнопки "вправо"*/
+    display:inline-block;
+    background-image:url(img/ad_scroll_forward1.png);
+    width:41px;
+    height:41px;
+    float:right;
+    margin-right:35px;
+     margin-top:20px;
+}
+article .gallery div.next:hover, article .gallery div.prev:hover{
+	box-shadow:inset 0 0 6px 0 rgba(0,0,0,.6);
+	
+}
+article .look_book h3{
+	margin-bottom:10px;
+	}
+	
+article .look_book>div{
+    /*стиль для блока с новостью*/
+	height:179px;
+	float:left;
+	margin:22px 0px 10px 0px;
+}	
+article .look_book div img{
+    /*картинка в блоке с новостью по левому краю*/
+	float:left;
+}
+article .look_book div p{
+    /*отступы для параграфа*/
+   	padding-left:280px;
+	padding-right:10px;
+	margin:0px;
+	
+}
+article .look_book div p span{
+	line-height: 18px;
+}
+
+article .look_book a.button{
+    /*стили для кнопки*/
+	float:left;
+	text-align:center;
+	margin-top:15px;
+	margin-bottom:60px;
+}
+
+article .contacts iframe{
+	/*описание фрейма с картой*/
+	width:470px;
+	height:340px;
+	float:left;
+	margin-right:20px;
+}
+article .contacts p{
+	margin-right:15px;
+}
+article .contacts p span{
+	margin-top:20px;
+	line-height: 18px;
+}
+article .contacts form div{
+	/*ширина блока div в форме*/
+	width: 300px;
+}
+article .contacts input,textarea{
+    /*описание элементов формы*/
+	background:#d6d2cf;
+	color:#82746f;
+	border: none;
+	border-bottom: 1px #f5f4f3 solid;
+	border-right: 1px #f5f4f3 solid;
+	width: 300px;
+	font: 12px Arial, Helvetica, sans-serif;
+	padding: 7px 10px;
+	margin-bottom:10px;
+	float:left;
+}
+article .contacts textarea{
+	
+	height: 100px;
+	margin-left:10px;
+	margin-top:-80px;
+	
+	}
+article .contacts a.button{
+	margin-left:10px;
+	position:relative;
+	left:153px;
+	top:158px;
+	}
+
+
+article .read_more h3{
+	margin-top:230px;
+}
+article .read_more p{
+	
+	margin-right:40px;
+	
+}
+article .read_more p span{
+	line-height: 18px;
+}
+
+
+
+	

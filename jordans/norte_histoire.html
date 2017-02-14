@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title> Norte historie</title>
+        <link href='main.css' type='text/css' rel='stylesheet' />
+		<link href='main1.css' type='text/css' rel='stylesheet'/>
+		
+		<script type="text/javascript" src="js/jquery-1.2.6.js" ></script>
+	</head>
+	
+	<body>
+		<header>
+			<nav >
+			 <!--Меню -->
+				<ul >
+					<li><a href='index.html'><img src='img/logo-jordans.png' alt=''/> </a></li><!--логотип -->
+					<li ><a href='news.html'>News </a></li> <!--элемент меню -->
+					<li><a href='nos_cereales.html' >Nos cereales </a></li>
+					<li><a href='nos_recettes.html' >Nos recettes </a></li>
+					<li><a href='norte_histoire.html' class='white'>Notre histoire </a></li><!--элемент меню имеет класс white,который окрашивает текст в белый цвет-->
+					<li><a href='nos_engagements.html'>Nos engagements </a></li>
+					<li><a href='contact.html'>Contact </a></li>
+					<li><a href='newsletter.html'>Newsletter </a></li>
+				</ul>
+			</nav>
+		</header>
+		<article>
+			<section class='norte_histoire' id='slider'>
+				<div class='history_title'><!--блок содержащий загаловок -->
+									<h2>L'histoire Jordans</h2><!--главный заголовок -->
+									<h3>Un conte de meuniers</h3>
+				</div>	
+				<div class='jear'><!--блок содержащий список годов -->	
+					<ul id="dots"><!--список годов-->
+						<li class="button1" onClick="changeImage(1)" ><!--элемент списка -->
+							<a href='#'>1855</a>
+						</li>
+						<li class="button2" onClick="changeImage(2)" >
+							<a href='#'>1889</a>
+						</li>
+						<li class="button3" onClick="changeImage(3)" >
+							<a href='#'>1940</a>
+						</li>
+						<li class="button4" onClick="changeImage(4)" >
+							<a href='#'>1950</a>
+						</li>
+						<li class="button5" onClick="changeImage(5)" >
+							<a href='#'>1969</a>
+						</li>
+						<li class="button6" onClick="changeImage(6)">
+							<a href='#'>1972</a>
+						</li>
+						<li class="button7" onClick="changeImage(7)">
+							<a href='#'>1991</a>
+						</li>
+					</ul>	
+				</div>	
+				<div id="mask" >
+						<ul id="image_container"><!--список изображений -->
+							  <li ><img src="img/111.jpg" alt=''/></li><!--элемент спискас изображением -->
+							  <li ><img src="img/2222.jpg" alt=''/></li>
+							  <li ><img src="img/3333.jpg" alt=''/></li>
+							  <li ><img src="img/4444.jpg" alt=''/></li>
+							  <li><img src="img/5555.jpg" alt=''/></li>
+							  <li ><img src="img/6666.jpg" alt=''/></li>
+							  <li ><img src="img/7777.jpg" alt=''/></li>
+						</ul>
+				</div>
+				<p ><!--блок с текстом -->
+					<span>
+						Choisissez<br/>
+						une date<br/>
+					<strong>
+					pour<br/>
+					démarrer!
+					</strong>	
+					</span>
+				</p>
+				<p><!--блок с текстом -->
+					<span>
+						Au fil des années,
+						découvrez <strong>toute notre</strong>
+						<strong>histoire</strong> et les anecdotes
+						les plus croustillantes
+						<strong>de la famille Jordan.</strong>
+					</span>	
+				</p>	
+			</section >
+		</article>
+		<script>
+			  //Количество элементов можно изменять
+			  var image =1;
+			  var maxImages = 7;//максимальное количество элементов
+			  var slider = document.getElementById('slider');
+			 
+			 // Функция , которая изменяет изображения .
+			  function changeImage(requiredImage) {
+			  
+			   // Начало алгоритма .
+			  
+				  if(requiredImage > maxImages){
+					image = 1;
+				  }
+				  else if(requiredImage < 1){ 
+					image = maxImages;
+				  }
+				  else{
+					image = requiredImage; 
+				  }
+
+				// Мы называем класс картинки , которую нужно отображать
+				slider.className = "image"+image;
+			  }
+	  </script>
+		<footer><!--подвал сайта -->
+			<nav><!--Меню -->
+				<div><!--одна из 3-х одинаковых колонок -->
+					<h6>Nos cereales</h6>
+					<ul>
+						<li><a href='#'>Country crisp > </a></li>
+						<li><a href='#'>Muesli > </a></li>
+						<li><a href='#'>Flocons d'Avoine > </a></li>
+					</ul>
+				</div>
+				<div><!--одна из 3-х одинаковых колонок -->
+					<h6>Restons en contact</h6>
+					<ul>
+						<li><a href='contact.html'>Contactez-nous > </a></li>
+						<li><a href='newsletter.html'>Inscrivez-vous à la newsletter > </a></li>
+					</ul>
+				</div>
+				<div><!--одна из 3-х одинаковых колонок -->
+					<ul>
+						<li><a href='#'>Mentions legales > </a></li>
+						<li><a href='#'> Foire aux questions > </a></li>
+						<li><a href='#'>Politique de confidentialite > </a></li>
+					</ul>					
+					<span>© 1972 - 2014 JORDANS FRANCE. </span><br/>
+					<span>Tous droits reserves.</span>
+				</div>
+			</nav>
+		</footer>
+	</body>	
+</html>	

@@ -1,0 +1,300 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>nos recettes</title>
+		<link href='main.css' type='text/css' rel='stylesheet'/>
+		<script type="text/javascript" src="js/jquery-1.2.6.js" ></script>
+		<style>
+			body{
+				background:url(img/fond-recette.jpg);
+				background-size:100%;
+				background-attachment: fixed;
+			}
+			body header nav{
+				background-position: 410px bottom;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header>
+		 <!-- Меню -->
+			<nav >
+				<ul >
+						<li><a href='index.html'><img src='img/logo-jordans.png' alt=''/> </a></li><!--логотип -->
+					<li ><a href='news.html'>News </a></li> <!--элемент меню -->
+					<li><a href='nos_cereales.html' >Nos cereales </a></li>
+					<li><a href='nos_recettes.html' class='white'>Nos recettes </a></li><!--элемент меню имеет класс white,который окрашивает текст в белый цвет-->
+					<li><a href='norte_histoire.html'>Notre histoire </a></li>
+					<li><a href='nos_engagements.html'>Nos engagements </a></li>
+					<li><a href='contact.html'>Contact </a></li>
+					<li><a href='newsletter.html'>Newsletter </a></li>
+				</ul>
+			</nav>
+		</header>
+	
+		<article>
+			<section class='nos_recettes'>
+				<div class='one_column'><!--главное содержимое в одной колонке -->
+					<div>
+						<h2>decouvrez vite</h2><!--главный заголовок -->
+						<h3>Les recettes de Maman Jordans !</h3>
+						
+						<p> <!--линия с рисунком в центре -->
+							<img src='img/icons3.png' alt=''/>
+							Pour déguster vos céréales autrement, voici les délicieuses recettes Jordans. Elles sont faciles et rapides à préparer !
+						</p>
+						<div class='form'><!--блок с формами -->
+								
+								<a href='#' ><!--ссылка при нажатии на которую флажки прячутся/открываются -->
+									RECHERCHE AVANCÉE
+								</a>
+								<span>Tout décocher</span>
+							
+							<div>
+								<h3>Gammes jordans</h3>
+									<form><!--форма с флажками -->
+										<input type='checkbox' id='check1'><label for='check1'>Country crisp</label><br/>
+										<input type='checkbox' id='check2'><label for='check2'>Muesli</label><br/>
+										<input type='checkbox' id='check3'><label for='check3'>Flocons d'Avoine</label><br/>
+									</form>
+							</div>
+							<div>	
+								<h3>Saveurs</h3>
+									<form><!--форма с флажками -->
+										<input type='checkbox' id='check4'><label for='check4'>Noix </label><br/>
+										<input type='checkbox' id='check5'><label for='check5'>Chocolat </label><br/>
+										<input type='checkbox' id='check6'><label for='check6'>Fruits </label><br/>
+									</form>
+							</div>
+							<div>	
+								<h3>Occasions</h3>
+									<form><!--форма с флажками -->
+										<input type='checkbox' id='check7'><label for='check7'>Petit-déjeuner </label><br/>
+										<input type='checkbox' id='check8'><label for='check8'>Goûter </label><br/>
+										<input type='checkbox' id='check9'><label for='check9'>Dessert</label><br/>
+									</form>	
+							</div>
+							
+							<div class='sticker' ><!--стикер, который меняет изображение при навебении мыши -->
+								<a href='#'>
+								<span >Lancer la recherche</span>
+								<img src='img/plus5.png' alt=''/>
+								</a>
+							</div>	
+						</div>	
+						
+					</div>
+					<div><!--блок, который содержит все рецепты -->
+						<div class='recipe' style='display:block'><!--блок, который содержит один рецепт -->
+							<img src='img/phpThumb_generated_thumbnailjpg.jpg' alt=''/><!--рисунок блюда -->
+								<ul>
+									<li>
+										<img src='img/meta-icons1.png' alt=''/><strong>10 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons2.png' alt=''/><strong>15 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons3.png' alt=''/><strong> 4 personnes</strong>
+									</li>
+								</ul>
+								
+								<h2>Les Pancakes Suprêmes</h2>
+								<span>Les pancakes suprêmes, des pancakes comme on les aime.</span>
+								<div class='sticker'>
+										<a href='#'>
+										<span >Découvrir cette recette</span>
+										<img src='img/plus1.png' alt=''/>
+										</a>
+								</div>	
+							
+						</div>
+						<div class='recipe' style='display:block'><!--блок, который содержит один рецепт -->
+							<img src='img/phpThumb_generated_thumbnailjpg1.jpg' alt=''/>
+								<ul>
+									<li>
+										<img src='img/meta-icons1.png' alt=''/><strong>15 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons2.png' alt=''/><strong>20 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons3.png' alt=''/><strong> 6 personnes</strong>
+									</li>
+								</ul>
+								
+								<h2>Gâteau Framboises et Avoine</h2>
+								<span>Flocons d’avoine entiers et framboises parfumées, le mariage parfait pour un gâteau raffiné !</span>
+								<div class='sticker'>
+										<a href='#'>
+										<span >Découvrir cette recette</span>
+										<img src='img/plus1.png' alt=''/>
+										</a>
+								</div>	
+							
+						</div>
+						<div class='recipe' style='display:block'><!--блок, который содержит один рецепт -->
+							<img src='img/phpThumb_generated_thumbnailjpg2.jpg' alt=''/>
+								<ul>
+									<li>
+										<img src='img/meta-icons1.png' alt=''/><strong>2 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons2.png' alt=''/><strong>3 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons3.png' alt=''/><strong> 2 personnes</strong>
+									</li>
+								</ul>
+								
+								<h2>Bowlcake au muesli</h2>
+								<span>En 3 minutes seulement, préparez au four à micro-ondes un « bowlcake » très gourmand !</span>
+								<div class='sticker'>
+										<a href='#'>
+										<span >Découvrir cette recette</span>
+										<img src='img/plus1.png' alt=''/>
+										</a>
+								</div>	
+							
+						</div>
+						
+						
+						<div class='recipe'><!--блок, который содержит один рецепт -->
+							<img src='img/phpThumb_generated_thumbnailjpg3.jpg' alt=''/>
+								<ul>
+									<li>
+										<img src='img/meta-icons1.png' alt=''/><strong>10 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons2.png' alt=''/><strong>15 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons3.png' alt=''/><strong> 4 personnes</strong>
+									</li>
+								</ul>
+								
+								<h2>Les Pancakes Suprêmes</h2>
+								<span>Les pancakes suprêmes, des pancakes comme on les aime.</span>
+								<div class='sticker'>
+										<a href='#'>
+										<span >Découvrir cette recette</span>
+										<img src='img/plus1.png' alt=''/>
+										</a>
+								</div>	
+							
+						</div>
+						<div class='recipe'><!--блок, который содержит один рецепт -->
+							<img src='img/phpThumb_generated_thumbnailjpg4.jpg' alt=''/>
+								<ul>
+									<li>
+										<img src='img/meta-icons1.png' alt=''/><strong>15 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons2.png' alt=''/><strong>20 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons3.png' alt=''/><strong> 6 personnes</strong>
+									</li>
+								</ul>
+								
+								<h2>Gâteau Framboises et Avoine</h2>
+								<span>Flocons d’avoine entiers et framboises parfumées, le mariage parfait pour un gâteau raffiné !</span>
+								<div class='sticker'>
+										<a href='#'>
+										<span >Découvrir cette recette</span>
+										<img src='img/plus1.png' alt=''/>
+										</a>
+								</div>	
+							
+						</div>
+						<div class='recipe'><!--блок, который содержит один рецепт -->
+							<img src='img/phpThumb_generated_thumbnailjpg5.jpg' alt=''/>
+								<ul>
+									<li>
+										<img src='img/meta-icons1.png' alt=''/><strong>2 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons2.png' alt=''/><strong>3 min</strong>
+									</li>
+									<li>
+										<img src='img/meta-icons3.png' alt=''/><strong> 2 personnes</strong>
+									</li>
+								</ul>
+								
+								<h2>Bowlcake au muesli</h2>
+								<span>En 3 minutes seulement, préparez au four à micro-ondes un « bowlcake » très gourmand !</span>
+								<div class='sticker'>
+										<a href='#'>
+										<span >Découvrir cette recette</span>
+										<img src='img/plus1.png' alt=''/>
+										</a>
+								</div>	
+							
+						</div>
+					</div>
+										
+					<a href='#' class='continuation'>
+						Charger d'autres actualités...
+					</a>
+				</div>
+			</section>	
+				
+		</article>
+		
+		<footer><!--подвал сайта -->
+			<nav><!--Меню -->
+				<div><!--одна из 3-х одинаковых колонок -->
+					<h6>Nos cereales</h6>
+					<ul>
+						<li><a href='#'>Country crisp > </a></li>
+						<li><a href='#'>Muesli > </a></li>
+						<li><a href='#'>Flocons d'Avoine > </a></li>
+					</ul>
+				</div>
+				<div><!--одна из 3-х одинаковых колонок -->
+					<h6>Restons en contact</h6>
+					<ul>
+						<li><a href='contact.html'>Contactez-nous > </a></li>
+						<li><a href='newsletter.html'>Inscrivez-vous à la newsletter > </a></li>
+					</ul>
+				</div>
+				<div><!--одна из 3-х одинаковых колонок -->
+					<ul>
+						<li><a href='#'>Mentions legales > </a></li>
+						<li><a href='#'> Foire aux questions > </a></li>
+						<li><a href='#'>Politique de confidentialite > </a></li>
+					</ul>					
+					<span>© 1972 - 2014 JORDANS FRANCE. </span><br/>
+					<span>Tous droits reserves.</span>
+				</div>
+			</nav>
+		</footer>
+		<script>
+			$("div.form>div").css("display", "none");//все дочернии div-ы класса form временно удаляются
+			$("div.form>span").css("display", "none");
+			$("div.form>a").toggle(
+				function() {
+					$("div.form>div").css("display", "block");//все дочернии div-ы класса form становятся блочными
+					$("div.form>span").css("display", "block");
+					$("div.form>a").css("background-image", "url(img/toggle2.png)");//у ссылки меняется фон
+					},
+				function() {
+					$("div.form>div").css("display", "none");
+					$("div.form>span").css("display", "none");
+					$("div.form>a").css("background-image", "url(img/toggle1.png)");
+					}
+			);
+			
+		</script>
+		<script>
+			
+		 $('a.continuation').click( function(){
+		     $('div.recipe:gt(2)').css('display', 'block');//div-ы класса recipe, начиная с 3-го становятся блочными
+		     $('a.continuation').css('display', 'none');//a.continuation удаляется
+			
+			} );
+		</script>
+	</body>	
+</html>	

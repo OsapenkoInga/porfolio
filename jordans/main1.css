@@ -1,0 +1,230 @@
+﻿
+	body header nav{
+				background-position:550px bottom;
+			}
+	body article{
+	/*определяет розмещение главного содержимого на странице*/
+				width:100%;
+				margin-top:-150px;
+				background:url(img/fond-histoire.jpg) no-repeat ;
+				background-size:100%;
+			}	
+body article section.norte_histoire{ 
+				position:relative;
+				height:776px;
+				}	
+			body article section div.history_title{
+				/*класс описывающий заголовок*/
+				position:absolute;
+				left:40%;
+				top:17%;
+				text-shadow: 0px 0px 5px #000;/*описание тени текста*/
+				text-align:center;
+				color: white;
+				}	
+			body article section.norte_histoire div.history_title h2{
+				/*класс описывающий главный заголовок*/
+				text-transform: uppercase;
+				font-size: 1.5em;
+				padding-top:5px;
+				font-weight:800;
+				line-height:1;
+				}
+			body article section.norte_histoire div.history_title h3{
+					/*класс описывающий подзаголовок*/
+				font-family: Satisfy;
+				font-weight: normal;
+				font-size: 1.7em;
+				padding-bottom:15px;
+				}	
+			 div.jear{
+				/*класс описывающий контейнер со списком годов*/
+				position:fixed;
+				z-index:100;
+				top:27%;
+				left:33.3%;
+				background:url(img/line1.png) repeat-x 0% 50%;/* пунктирная линия по центру блока*/
+				width:34%;
+				}	
+			 div.jear ul li{
+				/*описание элементов списка годов */
+				 display:inline-block;
+				 height:27px;
+				 width:40px;
+				 border-radius:20px;
+				 background:white;
+				 margin-top:7px;
+				 padding-top:14px;
+				 font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+				font-size: 11px;
+				text-align:center;
+				font-weight:900;
+				margin-right:10px;
+				margin-left:5px;
+				  }	
+			div.jear ul li a{
+				color:#2a2d34;
+				}	
+			 #mask{
+				 	/*описание блока содержащего список годов*/
+					width:100%;
+					height:100%;
+					position:absolute;
+					overflow:hidden;
+					}
+			#image_container { 
+					/*описание блока содержащего список изображений*/
+					position:absolute;
+					width:700%;
+					height:100%;
+					z-index:1;
+					display:none;
+					
+					
+					  /* Chrome */ 
+				  -webkit-transition-property:all;
+				  -webkit-transition-duration:1s;
+
+				   /* Firefox */ 
+				  -moz-transition-property:all;
+				  -moz-transition-duration:1s;
+				  
+				   /* Opera */ 
+				  transition-property:all;
+				  transition-duration:1s;
+				  }	
+				#image_container img{
+					/*описание изображений которые меняются*/
+				width:100%;
+				
+				}	  
+			.image1 #image_container{
+				/*расположение 1-го элемента*/
+					left:0;
+					display:block;
+				  }
+			.image2 #image_container{
+				/*расположение 2-го элемента*/
+					left:-100%;
+					display:block;
+				  }
+			.image3 #image_container{
+				/*расположение 3-го элемента*/
+					left:-200%;
+					display:block;
+				  }
+			.image4 #image_container{
+				/*расположение 4-го элемента*/
+					left:-300%;
+					display:block;
+				  }
+			.image5 #image_container{
+				/*расположение 5-го элемента*/
+					left:-400%;
+					display:block;
+				  }
+			.image6 #image_container{
+				/*расположение 6-го элемента*/
+					left:-500%;
+					display:block;
+				  }	  
+			.image7 #image_container{
+				/*расположение 7-го элемента*/
+					left:-600%;
+					display:block;
+				  }	 	  
+				 
+			 #image_container li{
+				/*общее описание элемента с картинкой*/
+					  float:left;
+					  width:1366px;
+					  margin:0px;
+					  padding:0px;
+					 
+				  }
+			 .image1 #dots li.button1, 
+			 .image2 #dots li.button2,
+			 .image3 #dots li.button3, 
+			 .image4 #dots li.button4, 
+			 .image5 #dots li.button5, 
+			 .image6 #dots li.button6, 
+			 .image7 #dots li.button7{
+				cursor:normal;
+				width:54px;
+				padding-top:20px;
+				padding-bottom:7px;
+				margin-top:0px;
+				border-radius:27px;
+				margin-right:0px;
+				margin-left:0px;
+				
+		     }	  
+			.image1 #dots li.button1 a, 
+			 .image2 #dots li.button2 a,
+			 .image3 #dots li.button3 a, 
+			 .image4 #dots li.button4 a, 
+			 .image5 #dots li.button5 a, 
+			 .image6 #dots li.button6 a, 
+			 .image7 #dots li.button7 a{
+				 /*изменение размера и цвета текста после нажатия на ссылку с годами*/
+				 color:#eb5244;
+				 font-size:14px;
+				 }	 
+	  body article section.norte_histoire div.jear ul,
+	  .image1 #dots,
+	  .image2 #dots,
+	  .image3 #dots,
+	  .image4 #dots,
+	  .image5 #dots,
+	  .image5 #dots,
+	  .image6 #dots,
+	  .image7 #dots{
+					width:90%;
+					margin:auto;	
+					background:url(img/line.png)repeat-x  0% 50%;/*описание сплошной линии по центру */
+					height:54px;
+					}
+	
+ div#mask+p{
+	/*описание стиля для блока текста p */
+		background:url(img/bulle1.png)no-repeat;
+		width:200px;
+		height:155px;
+		float:left;
+		position:absolute;
+		top:37%;
+		left:23.5%;
+		
+		}	
+ p span{
+	/*общие свойства для текста внутри блока р*/
+		display:block;
+		text-align:center;
+		line-height:1.5;
+		}
+div + p span{
+		/*свойства для текста внутри 1-го блока р*/
+		color:white;
+		padding:25%;
+		text-transform:uppercase;
+		font-size:0.75em;
+		line-height:1.5;
+		}	
+ p+p{
+		/*описание стиля для 2-го блока текста p*/
+		width:230px;
+		height:230px;
+		float:left;
+		border-radius:115px;
+		background:white;
+		position:absolute;
+		top:37%;
+		left:41%;
+		}
+ p+p span{
+	/*свойства для текста внутри 2-го блока р*/
+		padding:30% 20%;
+		font-size:0.75em;
+		}		
+			body  footer{position:fixed;z-index:100;bottom:0;}				
+

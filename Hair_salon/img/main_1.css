@@ -1,0 +1,65 @@
+﻿                #carousel span, #carousel img,
+			#thumbs a, #thumbs img  {
+				display: block;
+				float: left;
+			}
+			#carousel span, #carousel a,
+			#thumbs span, #thumbs a {
+				position: relative;
+			}
+			#carousel img,
+			#thumbs img {
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+
+			#carousel span {
+				width: 660px;
+				height: 476px;
+				margin-left:25px;
+			}
+
+			#thumbs-wrapper {
+				margin: 20px 0  0 25px;
+				position: relative;
+			}
+			#thumbs a {
+				padding-left:0px;
+				overflow: hidden;
+               
+			}
+            #thumbs a:first-child {
+                margin-left:0px;
+            }
+			
+			#wrapper img#shadow {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+			}
+
+			#prev, #next {
+				opacity:0.6;
+				display: block;
+				width: 41px;
+				height: 41px;
+				margin-top:20px;
+				position: absolute;
+				
+			}
+			#prev {
+				background:  url('img/gui/ad_scroll_back1.png') no-repeat 0 0;
+				
+			}
+			#prev:hover, #next:hover{
+				opacity:1;
+			}
+			#next {
+				background:  url('img/gui/ad_scroll_forward1.png') no-repeat 0 0;
+				right: 47px;
+			}			
+			
+			

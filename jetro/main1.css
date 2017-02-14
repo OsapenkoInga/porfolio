@@ -1,0 +1,592 @@
+*{	margin:0;
+	padding:0;
+	}
+ @font-face {/*Подключение нового шрифта */
+    font-family:Bebas; /* Имя шрифта */
+    src: url(fonts/BEBAS___.TTF); /* Путь к файлу со шрифтом */
+   } 
+  @font-face {
+    font-family:HelveticaNeue; /* Имя шрифта */
+    src: url(fonts/HelveticaNeue.ttf); /* Путь к файлу со шрифтом */
+   }  
+body{ 
+    /*описание шрифта для документа*/
+	font-family:HelveticaNeue;
+	font-size:12px;
+	}   
+   a{/*убираем подчеркивание ссылок*/
+		text-decoration:none;
+	}	
+.center_panel{
+    /*класс описывает горизонтальную панель сайта*/
+			height:60px;
+			width:100%;
+			background:#f1ad9b;
+			z-index:0;
+			clear: both;
+			}	
+ div.column{
+     /*класс описывает колонку с информацией*/
+		width: 300px;
+		float:left;
+		margin-top:40px;
+		}
+ div.column p{	
+		margin-top:40px;
+		font-family:HelveticaNeue;
+		
+		}	
+div.button, button{
+    /*описание класа кнопки*/
+		width:56px;
+		height:31px;
+		background:#e8663c;
+		font-family:Bebas;
+		font-size:12px;
+		font-weight:100;
+		color:#ffffff;
+		line-height:31px; /*выровнено по вертикали*/
+		text-align:center;/*выровнено по горизонтали*/
+		}	
+ul li{
+    /*элементы списка в один ряд*/
+		display:inline;
+		}	
+		
+ header{
+     /*описание шапки сайта*/
+		width:940px;
+		margin:auto;
+		} 
+header>img{
+    /*розмещение логотипа*/
+			margin-top:22px;
+			float:left;	
+			margin-bottom:23px;
+			}
+			
+header nav ul{
+    /*розмещение списка с меню*/
+			float:right;
+			margin:0px;
+			margin-top:35px;
+			
+			}
+ header nav ul a{
+     /*задание шрифта для элементов меню*/
+			font-family:Bebas;
+			font-size:16px;
+			color:#b9b9b9;
+			
+			}	
+ header nav ul a:hover{color:#e8663c;} /*при наведении мыши пункт меню меняет цвет*/
+		
+ header nav ul li{
+			margin-left:25px;
+			}	
+
+article{
+    /*описание блока с основным содержимым сайта*/	
+		width:960px;
+		margin:auto; /*по центру*/
+		z-index:1; /*поверх горизонтальной панели*/
+		margin-top:-60px; /*поднято на 60px вверх*/
+		background:white;
+		}	
+article  div.name_sect{
+		height:50px;
+		background:#e8603c;
+		font-family:Bebas;
+		font-size:24px;
+		color:#ffffff;
+		padding-top:11px;
+		padding-left:19px;
+				
+		}
+section ul.categor{
+	clear:both;
+	padding-top:10px;
+	
+}		
+article section.home div.column{
+    /*выравнивание класса column секции home*/
+		margin-right:10px;
+		margin-left:10px;
+		
+		}
+		
+article section.home div.column:last-child{
+    /*отступ справа последней колонки  ровен нулю*/
+		margin-right:0px;
+		}
+article section.home div.column img{
+    /*размещение картинки в колонке*/
+		margin-right:20px;
+		float:left;
+		}
+article section.home div.column h3{
+    /*описание названия колонки*/
+        font-weight:normal;
+		font-family:Bebas;
+		font-size:16px;
+		color:#e8663c;
+		padding:0px;
+		padding-right:25px;
+		}	
+
+article section.home div.column p{	
+    /*описание содержимого колонки*/	
+		color:#414141;
+		margin-bottom:20px;
+		}
+
+ div.name_categor{
+     /*описание блока с горизонтальной линией*/
+		display:inline-block;
+		margin-top:45px;
+		background:url(img/line.png) repeat-x; /*линия*/
+		margin-left:10px;
+		}
+ div.name_categor span{
+     /*заголовок блока с классом name_categor*/
+         
+		background:white;
+		float:left;
+		font-family:Bebas;
+		font-size:18px;
+		color:#e8603c;
+		padding-right:20px;
+		margin-top:-5px;
+		}
+article section.home div.name_categor ul,
+article section.portfol ul,
+article section.portfol_item ul{
+		clear:both; /*запретить обтекание списка*/
+		padding-top:24px;
+		
+		}		
+article section.home div.name_categor ul li,
+article section.portfol ul li,
+article section.portfol_item ul li{
+    /*выравнивание элементов списка*/
+		margin-right:20px;
+		float:left;
+		margin-bottom:44px;
+		}	
+article section.home div.name_categor ul li:last-child,
+article section.portfol ul li:last-child,
+article section.portfol_item ul li:last-child{
+		margin-right:-10px;
+		}
+article section.home div.name_categor ul li div,
+article section.portfol ul li div,
+article section.portfol_item ul li div{
+    /*описание блока текста в элементе списка*/
+		border:1px solid #dbdbdb; /*рамка вокруг блока*/
+		margin-top:-6px;
+		padding-bottom:13px;
+		padding-top:13px;
+		padding-left:13px;
+		font-family:Bebas;
+		font-size:12px;
+		color:#e8663c;
+		}	
+article section.home div.name_categor ul li div span,
+article section.portfol ul li div span,
+article section.portfol_item ul li div span{
+		font-size:16px;
+		color:#b9b9b9;
+		}	
+article section.about_us,
+article section.blog,
+article section.portfol,
+article section.portfol_item,
+article section.contact
+		{
+    /*внутренние отступы секций*/
+		padding-left:10px;
+		padding-right:10px;
+		}
+section.about_us section,
+ section.blog section,
+ section.portfol section,
+ section.contact section{
+    /*ширина широкой колонки*/ 
+		width:700px;
+		float:left;}
+
+section.about_us section:last-child,
+section.blog>section:last-child,
+section.contact section:last-child{
+    /*ширина узкой колонки*/
+		width:240px;
+		}		
+article section.about_us section>p{
+    /*описание блока информации*/
+		width:670px;
+		float:left;
+		padding-right:30px;
+		margin-top:24px;
+		line-height:1.5;
+		}
+article section.about_us section>p:nth-child(6){
+    /*описание 6-го блока в секции*/
+		font-style: italic;
+		width:615px;
+		margin-left:52px;
+		padding-left:20px;
+		border-left:8px solid #e8663c; /*рамка слева*/
+		}		
+article section.about_us section p img{
+		
+		border:1px solid #cccccc;
+		padding:2px;
+		float:left;
+		margin-right:23px;
+		}	
+article section.about_us section>p span{
+		font-size:30px;
+		font-weight:bold;
+		color:#e8603c;
+		padding-top:40px;
+		float:left;
+		margin-top:-50px;
+		margin-right:5px;
+		}	
+article section.about_us section>p:nth-child(7) {
+     /*описание 7-го блока в секции*/
+	-webkit-column-width: 310px;
+    -moz-column-width: 310px;
+    column-width: 310px; /*ширина колонок*/
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2; /*в блоке 2 колонки*/
+    -webkit-column-gap: 35px;
+    -moz-column-gap: 35px;
+    column-gap: 35px;
+    }
+article section.about_us section>p:nth-child(8) {
+     /*описание 8-го блока в секции*/
+	-webkit-column-width: 210px;
+    -moz-column-width: 210px;
+    column-width: 210px;/*ширина колонок*/
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; /*в блоке 3 колонки*/
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    }
+article section.about_us section>p.alert_text{
+    /*описание блока класса alert_text*/
+	height:60px; /*height и line-height равны, тоесть текст в блоке выровнян по вертикали по центру*/
+	line-height: 60px;
+	text-align:center; /*по центру по горизонтали*/
+	font-size:14px;
+	font-style:italic;
+	}	
+article section.about_us section>p:nth-child(9) {
+    /*задание фона, рамки и цвета текста 9-го параграфа секции*/
+	background-color:#effeb9;
+	border:1px solid #98c601;
+	color:#98c601;
+	}
+article section.about_us section>p:nth-child(10) {
+    /*задание фона, рамки и цвета текста 10-го параграфа секции*/
+	background-color:#fbcbc1;
+	border:1px solid #eb5439;
+	color:#eb5439;
+	}	
+article section.about_us section>p:nth-child(11) {
+    /*задание фона, рамки и цвета текста 11-го параграфа секции*/
+	background-color:#ffe9ad;
+	border:1px solid #fab418;
+	color:#fab418;
+	}	
+article section.about_us section>p:nth-child(12) {
+    /*задание фона, рамки и цвета текста 12-го параграфа секции*/
+	background-color:#d1e4f3;
+	border:1px solid #4d8fcb;
+	color:#4d8fcb;
+	margin-bottom:40px;
+	}	
+ section.about_us section div.name_categor,
+ section.blog section div.name_categor,
+ section.contact section div.name_categor{
+     /*делаем класс name_categor  блоком*/
+		display:block;
+		margin-top:28px
+		}	
+ section.about_us section div.name_categor p,
+ section.blog section div.name_categor p,
+ section.contact section div.name_categor p{
+		clear:both;
+		padding-top:13px;
+		}	
+ section.about_us section div.name_categor ul li,
+ section.blog section div.name_categor ul li,
+ section.contact section div.name_categor ul li{
+     /*элементы списка вертикальны*/
+		display:block;
+		}
+ section.about_us section div.name_categor p span, 
+ section.blog section div.name_categor p span,
+ section.contact section div.name_categor p span{
+     /*описание квадратов правой колонка*/
+		background-color:#f3af9d;
+		border:1px solid #e8603c;
+		padding:0px;
+		width:49px;
+		height:48px;
+		margin-right:8px;
+		}
+ section.about_us section div.name_categor p span:last-child,
+ section.blog section div.name_categor p span:last-child,
+ section.contact section div.name_categor p span:last-child{
+		margin-right:0px;
+		}	
+section.blog section section div.name_categor{ 
+    /*описание линии в конце подразделов большой колонки*/
+		height:19px;
+		clear:both;
+		margin-left:0px;
+		width:96%;
+		margin-bottom:32px;
+		margin-top:52px
+		} 		
+section.blog section section{
+		margin-top:25px;
+		}
+	
+section.blog section section>img{
+		width:670px;
+		}		
+section.blog section section div.ico{
+    /*описание иконок слева от большой колонки*/
+		width:75px;
+		height:75px;
+		background-color:#e8603c;
+		text-align:center;
+		line-height:75px;
+		margin-top:0px;
+		margin-left:-85px;	/*сдвиг иконки влево*/
+		float:left;	}		
+section.blog section section div img{
+		vertical-align: middle; /*выравнивание иконок по вертикали*/
+		}		
+section.blog section section>div{
+		margin-top:14px;
+		margin-bottom:52px;
+
+}
+section.blog section section div:last-child{
+		margin-top:-5px;
+		margin-bottom:52px;
+		
+		}		
+section.blog section section div p{
+    /*внутринние отступы в параграфов*/
+		padding:16px 40px 0 145px;
+		}		
+section.blog section section div div{
+		float:left;
+		}
+section.blog section section div.quote{
+    /*описание блока с цитатой*/
+		background-color:#f1f1f1;
+		height:55px;
+		font-style:italic;
+		padding-top:20px;
+		font-size:13px;
+		margin-top:0px;
+		width:96%;
+		}	
+section.blog section section div.quote img{
+    /*размещение картинки со скобками*/
+		margin-left:35px;
+		margin-right:15px;
+		float:left;
+		}		
+section.blog section section div div>span{
+    /*описание спамов внутри содержимого*/
+		display:block;
+		color:#bababa; /*серого цвета*/
+		line-height:2;
+		width:145px;
+		}
+		
+section.blog section section div div  span:nth-child(odd){
+    /*описание непарных спамов*/ 
+		font-family:Bebas;
+		color:#e8663c;
+		}	
+section.blog section section div div>span:last-child {
+    /*описание последнего спама с сылкой на сайт*/
+		color:#bababa;
+		font-family:HelveticaNeue;
+		margin-bottom:20px;
+		}		
+section.blog section section>div >span{
+    /*описание спамов с найбольшим размером текста*/
+		font-family:Bebas;
+		font-size:18px;
+		color:#e8663c;
+		}	
+section.blog section>a{
+    /*описание кнопок ссылок в конце большой колонки*/ 
+		width:26px;
+		height:26px;
+		background-color:#f3b29d;
+		color:white;
+		clear:both;
+		display:inline-block;
+		text-align:center;
+		line-height:26px;
+		margin-bottom:47px;
+		}
+section.blog section>a:hover{
+     /*при наведении на ссылку она меняет фон*/ 
+		background-color:#e8663c;
+		}
+section.portfol nav ul li {
+    /*отступы между элементами меню портфолио*/
+		margin:17px 0;
+		padding:0px;
+		
+}		
+section.portfol nav ul li a{
+    /*описание пункта меню портфолио*/
+		font-family:Bebas;
+		font-size:14px;
+		color:#b9b9b9;
+		padding:7px;
+		margin:0px;
+		}	
+section.portfol nav ul li a:hover{
+    /*при наведении мыши пункт меню портфолио изменяет цвет текста и фон*/
+		color:#ffffff;
+		background-color:#e8663c;
+		}
+article section.portfol ul li{margin-bottom:17px;}			
+section.portfol ul li a img.hov_img{
+    /*описание картинки с классом hov_img*/
+		opacity: 0; /*картинка поностью прозрачна*/
+		-moz-opacity:0;
+		margin-left:-222px
+
+}	
+section.portfol ul li a img.hov_img:hover{
+    /*при наведении мыши картинка становится видимой*/
+		 opacity: 0.7;
+		  -moz-opacity:0.7;
+		}	
+article section.portfol_item img{
+    /*Верхний отступ картинка*/
+		margin-top:24px;
+		}
+article section.portfol_item p{
+    /*внешние и внутренниу отступи у параграфов*/
+		margin-top:17px;
+		padding-right:3px;
+		}		
+article section.portfol_item div.name_categor{
+		margin-left:0px;
+		}
+article section.contact	section iframe{
+    /*Внешнине отступи блока с картой*/
+		margin-top:25px;
+		margin-bottom:35px;
+		}
+article section.contact	section form{
+    /*тили формы данных*/
+		float:right;
+		width:70%;
+		}
+article section.contact	section form input{
+    /*описание элементов формы*/ 
+		display:block;
+		height:33px;
+		width:202px;
+		
+		}
+		
+article section.contact	section form input,		
+article section.contact	section form textarea{
+    /*стили, общие для всех элементов формы*/
+		font-family:Bebas;
+		font-size:12px;
+		color:#e8603c;
+		border:1px solid #e8603c;
+		padding-left:13px;
+		margin-bottom:10px;
+		}	
+article section.contact	section form textarea{
+    /*описание многострочного поля ввода текста*/
+		width:450px;
+		height:193px;
+		padding-top:10px;
+		}	
+article section.contact	section form button{
+    /*описание кнопки*/
+		width:67px;
+		margin-bottom:37px;
+        border:none;
+		}		
+article section.contact	section form~ p{
+    /*стили для всех параграфов после form*/
+		width:27%;
+		padding-right:15px;
+		margin-bottom:15px;
+		}	
+article section.contact	section form~ p span{
+     /*стили для всех span-ов параграфов после form*/	
+		color:#e8603c;
+		font-weight:bold;
+		display:block;
+		}	
+footer{
+    /*описание подвала сайта*/
+		width:940px;
+		height:263px;
+		background:#e8663c;
+		margin:auto;
+		z-index:1;
+		margin-top:-263px;
+		border-left:10px solid white; /*рамка слева*/
+		border-right:10px solid white; /*рамка спарва*/
+		}
+		
+footer div.column {
+    /*описание колонки подвала*/
+		width:220px;
+		padding-right:40px;
+		padding-left:40px;
+		margin-right:10px;
+		margin-left:10px;
+		margin-top:35px;
+		
+		}
+footer div.column:first-child {
+    /*описание первай колонки подвала*/
+		width:265px;
+		margin-left:0px;
+		padding-left:35px;
+		padding-right:0px;
+		}	
+footer div.column:last-child {
+     /*описание последней колонки подвала*/
+		width:260px;
+		margin-right:0px;
+		padding-right:20px;
+		padding-left:5px;
+		}		
+footer div.column>span{
+		font-family:Bebas;
+		font-size:20px;
+		color:#ffffff;
+		}	
+footer div.column p{
+		color:#ffffff;
+		margin-top:21px;
+		padding:0px;
+		}		

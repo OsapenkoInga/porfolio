@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<link href='main.css' type='text/css' rel='stylesheet'/>
+		<title>newsletter</title>
+		<script type="text/javascript" src="js/jquery-1.2.6.js" ></script>
+		<style>
+			body{
+				/*определ¤ет фон дл¤ страницы*/
+				background:url(img/fond-newsletter.jpg);
+				background-size:100%;
+				background-attachment: fixed;
+			}
+			body header nav{
+				background-position: 980px bottom;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul >
+					 <!--Меню -->
+					<li><a href='index.html'><img src='img/logo-jordans.png' alt=''/> </a></li><!--логотип -->
+					<li ><a href='news.html'>News </a></li> <!--элемент меню -->
+					<li><a href='nos_cereales.html' >Nos cereales </a></li>
+					<li><a href='nos_recettes.html' >Nos recettes </a></li>
+					<li><a href='norte_histoire.html'>Notre histoire </a></li>
+					<li><a href='nos_engagements.html'>Nos engagements </a></li>
+					<li><a href='contact.html'>Contact </a></li>
+					<li><a href='newsletter.html' class='white'>Newsletter </a></li><!--элемент меню имеет класс white,который окрашивает текст в белый цвет-->
+				</ul>
+			</nav>
+		</header>
+	
+		<article>
+			<section class='newsletter'>
+				<div class='one_column'><!--главное содержимое в одной колонке -->
+					<div>
+						<h2><!--главный заголовок -->
+							Newsletter
+						</h2>
+						<p>  <!--линия с рисунком в центре -->
+							<img src='img/icons5.png' alt=''/>
+						</p> 
+						
+							<strong>
+								Pour tout savoir sur Jordans, prendre des nouvelles du moulin, ou recevoir des coupons de reduction, inscrivez-vous a notre newsletter !
+							</strong>
+					</div>
+					<form>	<!--форма -->
+						<div>
+							<p>Civilité*<br>
+								<select><!--список -->
+									<option>Choisissez</option><!--элемент списка -->
+									<option>Mademoiselle</option>
+									<option>Madame</option>
+									<option>Monsieur</option>
+								</select>
+							</p>
+							<p>Votre nom*<br>
+								<input type="text" name='name1'><!--текстовое поле для ввода имени -->
+							</p>
+							<p>Votre prénom*<br>
+								<input type="text" name='phone1'><!--текстовое поле для ввода телефона -->
+							</p>
+							<p>Votre email*<br>
+								<input type="text" name='email1'><!--текстовое поле для ввода е-мейла -->
+							</p>
+						</div>
+						<div>
+							<p>Adresse<br>
+								<input type="text" name='adress1'><!--текстовое поле для ввода адреса -->
+							</p>
+							<p>Code postal*<br>
+								<input type="text" name='postal1'><!--текстовое поле для ввода индекса -->
+							</p>
+							<p>Ville*<br>
+								<input type="text" name='sity1'><!--текстовое поле для ввода города -->
+							</p>
+							<p>Date de naissance<br>
+								<select><!--список чисел -->
+									<option>JJ</option>	<option>1</option>	 <option>2</option>
+									<option>3</option>	<option>4</option>	 <option>5</option>
+									<option>6</option>	<option>7</option>	 <option>8</option>
+									<option>9</option>	<option>10</option>	<option>11</option>
+									<option>12</option>	<option>13</option>	<option>14</option>
+									<option>15</option>	<option>16</option>	<option>17</option>
+									<option>18</option>	<option>19</option>	<option>20</option>
+									<option>21</option>	<option>22</option>	<option>23</option>
+									<option>24</option>	<option>25</option>	<option>26</option>
+									<option>25</option>	<option>26</option>	<option>27</option>
+									<option>28</option>	<option>29</option>	<option>30</option>
+									<option>31</option>	
+								</select>
+								<select><!--список месяцев -->
+									<option>MM</option>	<option>Janvier</option> <option>Février</option>
+									<option>Mars</option>	<option>Avril</option> <option>Mai</option>
+									<option>Juin</option>	<option>Juille</option> <option>Août</option>
+									<option>Septembre</option>	<option>Octobre</option>	<option>Novembre</option>
+									<option>Décembre</option>	
+								</select>
+								<select><!--список годов-->
+									<option>AAAA</option>	<option>1973</option>	 <option>1974</option>
+									<option>1975</option>	<option>1976</option>	 <option>1977</option>
+									<option>1978</option>	<option>1979</option>	 <option>1980</option>
+									<option>1981</option>	<option>1982</option>	<option>1983</option>
+									<option>1984</option>	<option>1985</option>	<option>1986</option>
+									<option>1987</option>	<option>1988</option>	<option>1989</option>
+									<option>1990</option>	<option>1991</option>	<option>1992</option>
+									<option>1993</option>	<option>1994</option>	<option>1995</option>
+									<option>1996</option>	<option>1997</option>	<option>1998</option>
+									<option>1999</option>	<option>2000</option>	<option>2011</option>
+									<option>2012</option>	<option>2013</option>	<option>2014</option>
+									<option>2015</option>	
+								</select>
+							</p>
+						</div>
+					</form>	
+					
+					<div>
+						<div class='sticker'><!--стикер, который меняет изображение при навебении мыши -->
+							<a href='#'>
+							<span >Valider</span>
+							<img src='img/plus9.png' alt=''/>
+							</a>
+						</div>
+						<small>	
+							* champs obligatoires
+						</small>	
+					</div>
+				</div>
+			</section >
+		</article>
+		<footer><!--подвал сайта -->
+			<nav><!--Меню -->
+				<div><!--одна из 3-х одинаковых колонок -->
+					<h6>Nos cereales</h6>
+					<ul>
+						<li><a href='#'>Country crisp > </a></li>
+						<li><a href='#'>Muesli > </a></li>
+						<li><a href='#'>Flocons d'Avoine > </a></li>
+					</ul>
+				</div>
+				<div><!--одна из 3-х одинаковых колонок -->
+					<h6>Restons en contact</h6>
+					<ul>
+						<li><a href='contact.html'>Contactez-nous > </a></li>
+						<li><a href='newsletter.html'>Inscrivez-vous à la newsletter > </a></li>
+					</ul>
+				</div>
+				<div><!--одна из 3-х одинаковых колонок -->
+					<ul>
+						<li><a href='#'>Mentions legales > </a></li>
+						<li><a href='#'> Foire aux questions > </a></li>
+						<li><a href='#'>Politique de confidentialite > </a></li>
+					</ul>					
+					<span>© 1972 - 2014 JORDANS FRANCE. </span><br/>
+					<span>Tous droits reserves.</span>
+				</div>
+			</nav>
+		</footer>
+	</body>	
+</html>	

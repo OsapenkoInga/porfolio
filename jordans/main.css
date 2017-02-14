@@ -1,0 +1,639 @@
+ @font-face {
+    font-family: Satisfy; /* Имя шрифта */
+    src: url(Satisfy/Satisfy-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+*{
+	margin:0px;
+	padding:0px;
+	font-family:'Open Sans', sans-serif;
+	}
+
+a{
+	text-decoration:none;
+	}	
+ul{	
+	list-style:none;
+	}
+li{
+	display:inline-block;
+	}
+	
+body header nav{
+	/* описание навигационного меню*/
+	width:87%;
+	height:75px;
+	margin:0 auto; /*по центру*/
+	background:url(img/bg_nav.png)repeat-x;
+	position:fixed; /*блок с меню фиксированый*/
+	top:-5px;left:6.5%;	
+	z-index:100;	 
+}
+body header ul{
+	height:65px;
+	background:url(img/ul_bg.jpg);
+}	 
+body header ul li{
+	margin-left:40px;
+	margin-right:15px;
+}
+body header ul li a{ 
+	/* описание пунктов навигационного меню*/
+	text-transform: uppercase;
+	text-align: center;
+	color: #abacac;
+	font-size:0.75em;
+	font-weight: bold;
+}
+body header ul li :hover, 
+body header ul li a.white{
+	/* определение цвета пункта меню после наведения на него мыши*/
+	color:#ffffff;
+	}
+
+body header ul li:first-child{
+	/* описание блока с логотипом*/
+	width:102px ;
+	height:35px;
+	margin-top:12px;
+	margin-left:30px;
+	display:inline-block;
+	}
+body article{
+	width:85%;
+	margin:0 auto;
+
+}
+body article section{
+	margin-top:8%;
+	}
+body article section.home{
+	margin-top:38%;
+	}	
+
+body article>section div.three_columns,
+ body footer nav>div {
+	 /* описание 3-х одинаковых столбцов для article и footer*/
+	width:31%;
+	display:inline-block;
+	margin-right:3%;
+	z-index:1;
+	margin-bottom:30px;
+	
+}
+body article>section div.three_columns h2 ,
+div.recipe h2, 
+div.black_mark h2{
+	font-size:1.2em;
+}
+
+body article>section div.three_columns:last-child,
+ body footer nav>div:last-child{
+	 /* правый отступ в последнего столбца отсутсвует*/ 
+	margin-right:0;
+}
+body article div.radius{
+	 /* описание шапки стобца*/ 
+	width:100%;
+	height:30px;
+	border-radius: 100% 100% 0 0; /*скругление верхних левых и правых углов*/ 
+	}
+body article>section div.one_column{
+	/*описание одной колонки*/
+	width:102%;
+	height:auto;
+	float:left;
+	position:relative;
+	z-index:1;
+	margin-left:-1%;
+	margin-bottom:30px;
+	background:url(img/555.png)no-repeat;
+	
+	}
+body article>section.news div.one_column{background-position:190px top;}
+body article>section.nos_cereales div.one_column{background-position:320px top;}
+body article>section.nos_recettes div.one_column{background-position:470px top;}
+body article>section.nos_engagements div.one_column{background-position:775px top;}
+body article>section.contact div.one_column{background-position:920px top;}
+body article>section.newsletter div.one_column{background-position:1040px top;}
+
+body article div.one_column>div{margin-top:9px;}	
+body article  div.one_column div p img{
+	/*размещение иконки в центре рамки */
+	float:left;
+	position:relative;
+	left:50%;
+	top:-30px;
+	}	
+
+
+body article div div{
+	
+	background:white;
+	text-align:center;
+	line-height:1.5em;
+	position:relative;
+	}
+
+body article div div>h2{
+		/*стиль для главного заголовка*/
+	color:#ffc456;
+	text-transform: uppercase;
+	font-size:1.5em;
+	
+	}	
+body article div.one_column div h2{
+	padding-top:25px;
+	padding-bottom:8px;
+}	
+body article div div h3{
+	font-family: Satisfy;
+	font-weight:normal;
+	font-size:1.7em;
+	
+}	
+body article div div span{
+	color:#676f80;
+	font-size:0.8em;
+}
+body article div div p{
+	font-size:0.9em;
+	margin:20px;
+	padding:10px;
+	margin-bottom:50px;
+	line-height:1.5;
+	border-top:1px solid #d4d5d6;
+}
+body article div div img{
+	margin-bottom:20px;
+	}
+body article div.sticker{
+	/*описание стиля для стикера*/
+	background:url(img/sticker-bg.png);
+	width:121px;
+	height:121px;
+	position:absolute;
+	}
+body article  div.sticker span{
+	/*описание стиля для текста внутри стикера*/
+	line-height:1.5;
+	font-weight:bold;
+	padding:20px;
+	float:left;
+	position:relative;
+	top:20%;
+	color:white;
+}
+body article  div.sticker img{
+	
+	opacity:0;/*изображение в стикере прозрачное*/
+	margin-top:-40%;
+	}
+body article  div.sticker:hover img{
+	/*при наведении курсора на стикер изображение становится видимым*/
+		opacity:1
+}
+body article div.sticker:hover span{
+	/*при наведении курсора на стикер текст становится невидимым*/
+	opacity:0
+}	
+body article>section.home div:hover div div span,
+ body article>section.news div:hover div div span{
+	 opacity:0;
+	 }
+body article>section.home div:hover div div img,
+ body article>section.news div:hover div div img{
+	 opacity:1;
+	 }	
+body article>section.nos_cereales div ul li:hover  div span{opacity:0;}
+body article>section.nos_cereales div ul li:hover  div img{opacity:1;}	
+body article div.three_columns div div{
+	left:30%;
+	bottom:30%;
+	}	
+body article div.one_column>div>div{
+	left:5%;
+	bottom:25%;
+	}	
+body article  a.continuation{
+	/*описание кнопки-ссылки при нажaтии на которую появляются скрытые блоки*/
+	width:99%;
+	height:72px;
+	border-top:4px solid white;
+	background:url(img/show-more-btn.png)no-repeat;
+	background-position:center -4px;
+	float:left;
+	box-sizing: border-box;
+	text-align:center;
+	color:white;
+	text-transform: uppercase;
+	padding-top:20px;
+}	
+body article section.news section{
+	/*секция с 3-ма колинками невидима */
+	display:none;
+	}
+body article section.news div.one_column div p img{
+	top:-20px;
+	}
+
+ body article section.nos_cereales li{width:31%;}
+ body article section.nos_cereales li a{color:#000000;float:left;}
+ body article section.nos_cereales li a h3{font-size:1.3rem;margin-bottom:20px;}
+ body article section.nos_cereales li:last-child a>h3{margin-bottom:63px;}
+ body article section.nos_cereales div div p{padding-top:20px;}
+ body article section.nos_cereales div div div{position:relative;left:30%;}
+ body article section.nos_cereales div div div span{font-size:0.9rem;padding:10px;}
+ body article section.nos_cereales div div div img{padding:15px;}
+ body article section.nos_cereales div div li:last-child div img{padding-top:0px;}
+ 
+  body article section.nos_recettes div div p, 
+  body article section.nos_engagements div div p{
+		padding-top:20px;
+  }
+  body article section.nos_recettes div div div.form{
+	  /*описание блока, содержащего формы */
+		  background:url(img/pattern-bg.png); /*фон блока*/
+		  width:100%;
+		  margin-left:-5%;
+		  margin-bottom:30px;
+		  overflow:hidden;
+		  padding-bottom:33px;
+	 }
+  body article section.nos_recettes div div div.form>a{
+		  background:url(img/toggle1.png)no-repeat;/*фон ссылки*/
+		  background-position:right; /*фон росположен справа*/
+		  padding-right:20px;
+		  color:black;
+		  font-weight:900;
+  }
+  body article section.nos_recettes div div div.form>a:hover{
+	   border-bottom:1px solid black; /*при наведении мыши возникает нижнее подчеркивание*/
+ }
+ body article section.nos_recettes  div.form span{
+		display:block;
+		margin-bottom:15px;
+ }	
+body article section.nos_recettes div.form  div {
+	/*описание блока, содержащего флажки */
+	float:left;
+	text-align:left;
+	margin-left:15px;
+	margin-right:15px;
+	background:none;
+	width:22.5%;
+}
+body article section.nos_recettes div.form div.sticker {
+	/*описание блока со стикером */
+		background: transparent url("img/sticker-bg.png") repeat scroll 0% 0%;
+		text-align:center;
+		width: 121px;
+		left:81%;
+}
+  body article section.nos_recettes div.form div h3{
+		text-align:left;
+		font-size:1.2em;
+		padding-right:5px;
+		overflow:hidden;
+		position:relative;
+	}
+ body article section.nos_recettes div.form div h3::after{
+		/*псевдоелемент который добавляет линию после заголовка h3 */
+		position:absolute;
+		top:16px;
+		margin-left:12px;
+		content: "";
+		height:1px;
+		width:500px;
+		background:#d4cfbf; 
+	}
+ body article section.nos_recettes div.form div input{
+	 /*описание флажка */
+	 margin-right:8px;
+	 margin-top:20px;
+	 }
+ body article section.nos_recettes div.form div label{
+	 font-size:0.8em;
+	 }
+ body article section.nos_recettes div.recipe {
+	 /*описание блока с рецептом*/
+	 text-align:center; 
+	 overflow:hidden;
+	 left:0;
+	 display:none; /*блок удален*/
+	 } 
+ body article section.nos_recettes div.recipe>img {
+	 /* стиль для картинки в рамке повернутой на определенный градус */
+		 width:37%;
+		 margin:45px 0 30px 30px;
+		 float:left;
+		 border:5px solid white;
+		 box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+		 transform: rotate(-4deg);
+		 position:relative;
+		 z-index:1;
+	 } 
+ body article section.nos_recettes div.recipe:nth-child(even)>img { 
+		/*каждая вторая картинка повернута противоположно*/
+		transform: rotate(4deg);
+	}		 
+ body article section.nos_recettes div.recipe ul {
+	 /*описание списка*/
+		 background: transparent url("img/pattern-bg.png") repeat scroll 0% 0%;
+		 width:20%;
+		 float:left;
+		 text-align:left;
+		 padding:70px 0 60px 30px;
+		 margin-top:65px;
+		 position:relative;
+		 left:-10px;
+		 
+		 } 
+body article section.nos_recettes div.recipe li {
+	 /*элемент списка с новой строки*/
+	display:block;
+	} 
+body article section.nos_recettes div.recipe li  img{
+	margin-bottom:0px;
+	margin-right:20px;
+	} 
+body article section.nos_recettes div.recipe li  strong{
+	text-transform: uppercase; /*большые буквы*/
+	font-size:0.8em;
+	line-height:4em;
+	padding-left:20px;
+	} 
+body article section.nos_recettes div.recipe h2{
+	margin-top:40px;
+	} 
+body article section.nos_recettes div.recipe>span{
+	font-size:0.9em;
+	display:inline-block;
+	width:30%;
+	} 
+body article section.nos_recettes div.recipe>div{
+	 /*розмещение стикера*/
+	left:77%;
+	} 
+body article section.nos_recettes a.continuation{
+	 /*описание кнопки-ссылки, при нажатии на которую появляются новые рецепты*/
+	margin-top:40px;
+	width:100%; 
+	} 
+     
+body article section.nos_engagements div.black_mark{
+		/*описание колонки */
+			width:32.5%;
+			display:inline-block;
+			left:0;
+			margin-top:-54px;
+			
+	} 
+body article section.nos_engagements div.black_mark:nth-child(2n){
+	/*2-я колонка имеет левую и правую рамки */
+			border-left:1px solid #d4d5d6;
+			border-right:1px solid #d4d5d6; 
+	}	
+ body article div.black_sticker{
+	 /*описание блока с черным стикером*/
+		background:url(img/sticker-black-bg.png);
+		width:121px;
+		height:121px;
+		margin:auto;
+	} 
+body article div.black_sticker img{
+	/*розмещение картинки внутри черного стикера*/
+		margin-top:25px;
+	}	
+body article section.nos_engagements div.black_mark h2 a{
+	/*цвет заголовка колонки*/
+		color:black;
+	}	
+body article section.nos_engagements div.black_mark h4 a{
+		color: #FFC456;
+		text-transform: uppercase;
+		font-size:0.8em;
+		display:inline-block;
+		margin-bottom:24px;
+}	
+body article section.nos_engagements div.black_mark h4 img{
+	/*розмещение картинки-стрелочки*/
+		float:right;
+		margin-top:6px;
+		margin-left:5px;
+	}
+body article section.contact p,
+body article section.newsletter p
+ {margin-bottom:6px;}
+body article section.contact p img,
+body article section.newsletter p img
+{margin-top:10px;}
+
+body article section.contact strong,
+body article section.newsletter strong{
+	/*описание блока с текстом*/
+		font-size:0.8em;
+		display:block;}
+body article section.contact strong a{	
+		color:#ffc456;
+		text-decoration:underline;
+	}
+body article section.contact strong img{
+		vertical-align:middle;
+		margin:0;
+	}
+body article section.contact div.phone_adress {
+	/*описание блока с номером телефона и адресом*/
+		width:75%;
+		margin:auto;
+		text-align:left;
+		line-height:1em;
+		overflow:hidden;
+		margin-top:25px;
+	}
+body article section.contact div.phone_adress img{
+	/*розмещение картинки с номером телефона*/
+		float:left;
+		margin-right:14%;
+		margin-left:-17px;
+	}
+body article section.contact div.phone_adress span{
+	line-height:1em;
+	}
+body article section.contact div.phone_adress span img{
+	margin-top:7px;
+	margin-right:13px;
+	}
+ form{
+	 /*описание формы ввода данных*/
+		background:white;
+		font-size:0.8em;
+		color: #2A2D34;
+		}
+		
+body article section.contact div form{
+	/*описание формы ввода данных класса contact*/
+	overflow:hidden;
+	padding:53px 15px 0 15px;
+	}		
+body article section.newsletter div form{
+	/*описание формы ввода данных класса newsletter*/
+	overflow:visible;
+	padding-left:220px;
+	padding-top:26px;
+	}		
+ form input,
+ form textarea,
+ form select{
+	/*описание элементов формы ввода данных*/
+			border:1px solid #e5e1d9;
+			background:#fafafa;
+			box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;/*тень*/
+			margin-top:8px;
+			margin-bottom:12px;
+		}
+form input:focus,
+ form textarea:focus,
+ form select:focus{
+	/*рамка, когда элемент формы получает фокус*/ 
+	 border:1px solid #abacac;
+	 }		
+body article section.contact div form input[type='text']{
+		/*описание размеров элементов формы c type='text'*/
+		width:358px;
+		height:32px;
+		
+		}
+body article section.contact div form textarea{width:748px;height:184px;}
+ body article section.contact div form p:first-child{
+	 /*первый элемент формы распологается справа */
+	 float:right;
+	 }
+ body article section.contact div form p:nth-child(1n+5){
+	/*начиная с 5-го элемента формы блоки inline-block, тоесть распологаются в одну строку */
+	float:left;
+	
+	 }	
+ body article section.contact div form p:nth-child(6),
+ body article section.contact div form p:nth-child(7),
+ body article section.contact div form p:nth-child(8){
+	 /*6-й и 7-й и 8-й элементы с левым отступом 29px */
+	margin-left:29px;
+	 }
+ body article section.contact div form p input.small{
+	 /* ширина для элементов формы с классом small */
+	 width:163px;
+	 }
+ body article section.contact div form + div,
+ body article section.newsletter div form + div{
+	 /*описание блока который идет непосредственно после формы*/
+	clear:left;
+	 overflow:hidden;
+	 margin:0px;
+	 }
+
+ body article section.newsletter div form input{
+	 /*описание размеров элементов формы ввода данных*/
+	 height:32px;
+	 padding-left:12px;
+	 width:336px;
+	 }	 
+ body article section.contact div.sticker,
+ body article section.newsletter div.sticker {
+	 /*описание стикера для класов contact и newsletter */
+	 position:relative;
+	 margin:auto;left:0;
+	 }
+ body article section.contact div.sticker span,
+ body article section.newsletter div.sticker span{
+	  /*описание текста в стикере для класов contact и newsletter */
+	 padding:30px;
+	 }
+ body article section.contact div small,
+ body article section.newsletter div small{
+	  /*описание блока с текстом */
+	 font-size:0.55em;
+	 line-height:1.5em;
+	 float:left;
+	 text-align:left;
+	 margin:20px 15px 30px 15px;
+	 }
+	 
+ body article section.newsletter form div{
+	  /*2 колонки элементов формы */
+	 display:inline-block;
+	 }	
+ body article section.newsletter div form p{
+	  /*описание блока с текстом и элементом формы */
+	 border:none;
+	 text-align:left;
+	 padding:0px;
+	 margin:0px;
+	 margin-bottom:4px;
+	 }	 
+ body article section.newsletter div form select{
+	  /*описание списка формы*/
+	 width:160px;
+	 height:32px;
+	 padding-left:12px;
+	margin-right:27px;
+	 }
+body article section.newsletter div form div:last-child{
+	 /*отступ 2-й колонки с элементами формы */
+	margin-left:26px;
+	}	 
+ body article section.newsletter div form div:last-child select:nth-child(2){width:65px;}	 /*ширина второго select*/
+ body article section.newsletter div form div:last-child  select:nth-child(3){width:128px;} /*ширина третьего select*/	 
+ body article section.newsletter div form div:last-child  select:nth-child(4){width:97px;}	  /*ширина четвертого select*/
+
+ 
+ footer{
+	 /*описание подвала сайта*/
+	width:100%;
+	height:190px;
+	background:#2a2d34;
+	float:left;
+	margin-top:70px;
+}
+footer nav{
+	
+	width:85%;
+	margin:auto;
+	margin-top:25px;
+}
+footer nav div{
+	border-top:1px solid #919296;/*линия вверху колонки */
+	text-transform: uppercase;
+	float:left;
+}
+
+footer nav div h6,footer nav div ul{
+	/*стиль заголовка колонки */
+	color:#8d8d8d;
+	font-weight:800;
+	padding-top:20px;
+	padding-bottom:15px;
+}
+footer nav div h6 a,footer nav div ul a{
+	color:#8d8d8d;
+}
+footer nav div h6 a:hover,,footer nav div ul a:hover{
+	border-bottom:1px solid #8d8d8d;/*при наведении на ссылку заголовка появляется нижняя рамка*/
+}
+footer nav div h6 li,,footer nav div ul li{
+	display:inline-block;
+	padding-right:15px;
+}
+footer nav div ul{
+	list-style:none;
+}
+footer nav div>ul li a,footer div span{
+	color:white;
+	font-size:0.9em;
+}
+footer nav div>ul li a:hover{
+	/*при наведении на ссылку пункту меню появляется нижняя рамка и увеличивается толщина текста*/
+	border-bottom:1px solid white;
+	font-weight:600;
+}	
+	
+			
