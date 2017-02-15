@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row top-row">
+                <div class="col-md-3">
+                    <ul class="nav navbar-nav top-menu">
+                        <li>Delivery</li>
+                        <li>FAQ</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-md-offset-7 text-right">
+                    <div class="row">
+                        <div class="col-md-7 dropdown">
+                            <button class="btn btn-link dropdown-toggle text-uppercase" type="button" data-toggle="dropdown">
+                                dollars <img src="img/ul.png" alt=""/>
+                            </button>
+                            <ul class="col-md-5 dropdown-menu pull-right">
+                                <li>dollars</li>
+                                <li>ua</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5 dropdown">
+                            <button class="btn btn-link dropdown-toggle text-uppercase" type="button" data-toggle="dropdown">
+                                en <img src="img/ul.png" alt="" />
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>en</li>
+                                <li>rub</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row navbar bottom-row">
+                <div class="col-md-2 col-sm-6 navbar-header">
+                    <a class="navbar-brand"><img src='img/logo.png' /></a>
+                </div>
+                <nav class="col-md-8 col-sm-12 my-menu text-center">
+                    <ul class="nav navbar-nav ">
+                        <li>
+                            <a href="">
+                                home
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                catalog
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                news
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                sale
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                about
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                contact
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col-md-2 col-sm-6 bag-search">
+                    <div class="bag">
+                        your bag
+                        <span>0</span>
+                    </div>
+                    <div>
+                        <img src="img/search.png" alt=""/>
+                    </div>
+                    <div class="bag-product">
+                        <div class="sum-form">
+                            <span></span>
+                            <form>
+                                <button type="reset">Reset</button>
+                                <button type="submit">Buy</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <h1 class="text-center">Catalog</h1>
+        <nav class="clearfix catalog-menu">
+            <ul class="nav navbar-nav ">
+                <li><a href="#">all<span></span></a></li>
+                <li><a href="#">t-shirts<span></span></a></li>
+                <li><a href="#">sweaters<span></span></a></li>
+                <li><a href="#">shorts<span></span></a></li>
+                <li><a href="#">jackets<span></span></a></li>
+                <li><a href="#">accessoires<span></span></a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row my-row">
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/1.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/2.jpg" alt="" />
+                        <h5 class="text-center">Jogging bermuda shorts</h5>
+                        <h6 class="text-center ">
+                            <span class="sale">$36</span>
+                            <span class="operand">$12</span>
+                        </h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product">
+                    <div class="linearGrad"><span>new</span></div> 
+                    <div class="thumbnail">
+                        <img src="img/3.jpg" alt="" />
+                        <h5 class="text-center">Basic beach flip flops</h5>
+                        <h6 class="text-center operand">$9</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="accessoires">
+                    <div class="thumbnail">
+                        <img src="img/4.jpg" alt="" />
+                        <h5 class="text-center">Black sunglasses</h5>
+                        <h6 class="text-center operand">$29</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col-md-3 col-sm-6 product" data-name="sweaters">
+                    <div class="thumbnail">
+                        <img src="img/5.jpg" alt="" />
+                        <h5 class="text-center">Long sleeved twill shirt</h5>
+                        <h6 class="text-center operand">$20</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/6.jpg" alt="" />
+                        <h5 class="text-center">Basic swimsuit</h5>
+                        <h6 class="text-center operand">$36</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/7.jpg" alt="" />
+                        <h5 class="text-center">Bleached shorts</h5>
+                        <h6 class="text-center operand">$19</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="t-shirts">
+                    <div class="thumbnail">
+                        <img src="img/8.jpg" alt="" />
+                        <h5 class="text-center">T-shirt with lower panel</h5>
+                        <h6 class="text-center">
+                            <span class="sale">$32</span> 
+                            <span class="operand">$12</span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-row">
+                <div class="col-md-3 col-sm-6 product" data-name="sweaters">
+                    <div class="thumbnail">
+                        <img src="img/5.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/6.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/7.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="t-shirts">
+                    <div class="thumbnail">
+                        <img src="img/8.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col-md-3 col-sm-6 product" data-name="sweaters">
+                    <div class="thumbnail">
+                        <img src="img/5.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/6.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="shorts">
+                    <div class="thumbnail">
+                        <img src="img/7.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 product" data-name="t-shirts">
+                    <div class="thumbnail">
+                        <img src="img/8.jpg" alt="" />
+                        <h5 class="text-center">Printed swimsuit</h5>
+                        <h6 class="text-center operand">$23</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn-link center-block load"> load more...<span></span></div>
+        </div>
+    </article>
+    <div class="subscribe">
+       <h4 class="text-center">
+           subscribe
+       </h4>
+        <h2 class="text-center">
+            Stay updated on news
+        </h2>
+        <form class="center-block">
+            <input type="email" value="Your Email Address" />
+            <button type="submit"><img src="img/form.png"/></button>
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row navbar ">
+                <div class="col-md-2 navbar-footer">
+                    <a class="navbar-brand"><img src='img/logo.png' /></a>
+                </div>
+                <nav class="col-md-6 col-md-offset-1">
+                    <ul class="nav navbar-nav ">
+                        <li><a href="">home</a></li>
+                        <li><a href="">catalog</a></li>
+                        <li><a href="">news</a></li>
+                        <li><a href="">sale</a></li>
+                        <li><a href="">about</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="col-md-3 copiright">
+                    <div>
+                      <span >©2010 - 2016 All rights reserved</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script>
+        $(document).ready(function () {
+            function prodctHide() {
+                $('.product').slice(8).hide();
+            };
+            prodctHide();
+            $('.catalog-menu li a').click(function () {               
+            var textMenu = $(this).text(),
+                product = $('.product');           
+            product.hide();
+            for (var i = 0; i < product.length; i++) {
+                if (textMenu == 'all') {
+                    product.show();
+                    prodctHide();
+                }
+                if (product.eq(i).attr('data-name') == textMenu) {
+                    product.eq(i).show();
+                    prodctHide();                   
+                };
+            };
+           
+        });
+        var addProduct = 8;
+        $('.load').click(function () {
+            addProduct = addProduct + 4;
+            $('.product').slice(8, addProduct).show();
+        });
+
+        //получение и потеря фокуса у input(e-mail)
+        $('input[type="email"]').focus(function () {
+            $(this).val('');
+        });
+        $('input[type="email"]').focusout(function () {
+            $(this).val('Your Email Address');
+        });
+        var sum = 0;
+       //добавление товаров в корзину
+        $('.product').click(function () {
+            var i_Product = +$('.bag span').text();
+           i_Product = i_Product + 1;
+           $('.bag span').text(i_Product);          
+           var imgProduct = $(this).clone().find('img'), //записываем в переменную изображение текущего товара
+           nameProduct = $(this).clone().find('h5'),  //записываем в переменную название текущего товара
+           priceProduct = $(this).clone().find('.operand'), //записываем в переменную цену текущего товара
+              //в переменную operand помещаем цену на товар, не учитывая знак $
+              operand = +$(this).find('.operand').text().slice(1);
+               
+            $('.bag-product').prepend('<div class="one-product"></div>')
+            $('.bag-product div:empty').append(imgProduct).append(nameProduct).append(priceProduct);
+            sum = sum + operand;
+            $('.sum-form span').text('Suma: ' + sum + '$');
+
+            var c = 0;
+            $('.bag').click(function () {
+                if (c == 0) {
+                    $('.bag-product').show(300);
+                    c = 1;
+                } else {
+                    $('.bag-product').hide(300);
+                    c = 0;
+                }
+
+            });
+        });
+    });
+    </script>
+
+    <script src="js/bootstrap.js"></script>
+    
+</body>
+</html>
