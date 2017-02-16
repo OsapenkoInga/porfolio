@@ -12,15 +12,20 @@ li, li a, .bag-search, .btn-link, .subscribe h4,form input[type="email"], .copir
 li a:hover, li:hover{
     color:#333333;
 }
+
  a:focus{
      color:#333;
      background:none;
      border:none;
  }
+  /*---------------верхняя часть header-----------------------*/
 .top-row{
     height:43px;
     border-bottom:1px solid #ededed;
     padding-top:3px;
+}
+.top-row .col-sm-12 .top-menu li, .top-row .col-sm-12 .dropdown{    
+    display:inline-block;
 }
 .top-menu, .navbar-brand{
     position:absolute;
@@ -51,18 +56,21 @@ li a:hover, li:hover{
 .dropdown:last-child .dropdown-toggle img{
     margin-left:7px;
 }
+  /*---------------нижняя часть header-----------------------*/
 .bottom-row{    
     border-bottom:1px solid #ededed;
     height:100px;
-
+    text-align:left;
 }
 .navbar-brand{
     padding:0;
-    padding-top:3px;
+    padding-top:3px;    
 }
+/*---------------------Основное меню------------------------------*/
 .my-menu{
     overflow:hidden;
     height:100%;
+    text-align:center;
 }
 .my-menu .navbar-nav{
     float:none;
@@ -74,6 +82,7 @@ li a:hover, li:hover{
 .my-menu li{
    padding:0 29px;    
     }
+ /*нижнее подчеркивание пунктов меню в виде градиента*/
 .my-menu li:hover span, .catalog-menu li:hover span, .load:hover span{
     display:inline-block;    
     height:2px;
@@ -83,6 +92,10 @@ li a:hover, li:hover{
     position:absolute;
     left:0;
     bottom:35px;
+}
+/*цвет гамбургер-иконки*/
+.icon-bar{
+    background:#333;
 }
 .nav>li>a{   
    padding:40px 0;
@@ -99,7 +112,8 @@ li a:hover, li:hover{
     padding-right:0px;
     letter-spacing:1.5px;
 }
-.bag-search .bag span{
+/*круглій блок, где показано количество єлементов в корзине*/
+.bag-search .bag span{    
      border:2px solid #1f86da;
      display:inline-block;
      width:48px;
@@ -115,6 +129,7 @@ li a:hover, li:hover{
 .bag-search div{
     display:inline-block;
 }
+/*блок с корзиной(выбраные товары)*/
 .bag-search .bag-product {
     width:400px;
     height:200px;
@@ -127,6 +142,7 @@ li a:hover, li:hover{
     overflow:auto;
     display:none;
     }
+ /*блок вгнизу корзины с сумой и формой отправки и сброса*/
 .sum-form{
     position:absolute;
     bottom:0;
@@ -135,6 +151,7 @@ li a:hover, li:hover{
     height:50px;    
     background:#eae8e9;
 }
+/*блок с сумой товаров*/
 .sum-form span{
     float:left;
     display:inline-block;
@@ -142,6 +159,7 @@ li a:hover, li:hover{
     padding-left:10px;
     font-size:16px;
 }
+/*кнопки формы*/
 .sum-form button{
     float:right;
     width:30%;
@@ -154,6 +172,7 @@ li a:hover, li:hover{
     background: linear-gradient(to right, #1274d3, #3195de);   
     color:white;
 }
+/*------------------------блок с одним добавленым товаром-------------------*/
 .one-product{    
     width:100%;
     height:50px;
@@ -173,6 +192,7 @@ li a:hover, li:hover{
     float:right;
     margin-right:5px;
     }
+/*------------------------------главный заголовак----------------------------*/
 h1{
     font-family:'Playfair Display', serif;
     font-size:58px;
@@ -209,6 +229,7 @@ h1{
  .product{
      position:relative;
  }
+ /*отметка New*/
 .product .linearGrad{
     position:absolute; 
     text-align:center;
@@ -296,6 +317,9 @@ footer {
 .navbar-footer .navbar-brand{
     padding-top:6px;
 }
+footer .col-md-6{
+    padding-right:0;
+}
 footer .navbar-nav li{
     letter-spacing:1.5px;    
     margin-right:53px;
@@ -308,6 +332,49 @@ footer .navbar-nav li:last-child{
     display:block;
     height:132px;
     padding-top:40px;
-    text-transform:none;
-    
+    text-transform:none;    
+}
+@media only screen and (max-width: 992px) {
+    .my-menu {
+        padding-top: 40px;      
+        
+    }
+    .product .linearGrad {
+        left:70px;
+    }
+    footer nav{
+        margin-top:40px;
+    }
+    .bag-search .bag-product {
+       left:0;
+        
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .my-menu{
+        text-align:right;       
+        width:50%;
+        float:right;  
+        padding-top:0px; 
+       
+    }
+    .my-menu li:hover span, .catalog-menu li:hover span{
+        bottom:0;
+    }  
+    .nav > li > a{
+        padding:10px;
+    }
+    .catalog-menu .navbar-toggle{
+        float:none;
+    }
+    .bag-search{
+        margin-top:15px;
+    }
+    .product .linearGrad {
+        left:170px;
+    }
+    footer .navbar-nav li:last-child{
+    margin-right:15px;    
+}
 }

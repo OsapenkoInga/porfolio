@@ -22,25 +22,25 @@
     <header>
         <div class="container">
             <div class="row top-row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-12">
                     <ul class="nav navbar-nav top-menu">
                         <li>Delivery</li>
                         <li>FAQ</li>
                         <li>Help</li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-md-offset-7 text-right">
+                <div class="col-md-2 col-md-offset-7 col-sm-12 text-right">
                     <div class="row">
                         <div class="col-md-7 dropdown">
                             <button class="btn btn-link dropdown-toggle text-uppercase" type="button" data-toggle="dropdown">
-                                dollars <img src="img/ul.png" alt=""/>
+                                dollars <img src="img/ul.png" alt="" />
                             </button>
-                            <ul class="col-md-5 dropdown-menu pull-right">
+                            <ul class=" dropdown-menu pull-right">
                                 <li>dollars</li>
                                 <li>ua</li>
                             </ul>
                         </div>
-                        <div class="col-md-5 dropdown">
+                        <div class="col-md-5   dropdown">
                             <button class="btn btn-link dropdown-toggle text-uppercase" type="button" data-toggle="dropdown">
                                 en <img src="img/ul.png" alt="" />
                             </button>
@@ -52,57 +52,66 @@
                     </div>
                 </div>
             </div>
-            <div class="row navbar bottom-row">
-                <div class="col-md-2 col-sm-6 navbar-header">
+            <div class="row navbar bottom-row" role="navigation">
+                <div class="col-lg-2 navbar-header">
                     <a class="navbar-brand"><img src='img/logo.png' /></a>
                 </div>
-                <nav class="col-md-8 col-sm-12 my-menu text-center">
-                    <ul class="nav navbar-nav ">
-                        <li>
-                            <a href="">
-                                home
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                catalog
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                news
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                sale
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                about
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                contact
-                                <span></span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="col-md-2 col-sm-6 bag-search">
+                <div class="container-fluid col-lg-8 ">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <nav class="my-menu  collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li>
+                                <a href="">
+                                    home
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    catalog
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    news
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    sale
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    about
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    contact
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2 bag-search">
                     <div class="bag">
                         your bag
                         <span>0</span>
                     </div>
                     <div>
-                        <img src="img/search.png" alt=""/>
+                        <img src="img/search.png" alt="" />
                     </div>
                     <div class="bag-product">
                         <div class="sum-form">
@@ -120,7 +129,7 @@
     <article>
         <h1 class="text-center">Catalog</h1>
         <nav class="clearfix catalog-menu">
-            <ul class="nav navbar-nav ">
+            <ul class="nav navbar-nav ">               
                 <li><a href="#">all<span></span></a></li>
                 <li><a href="#">t-shirts<span></span></a></li>
                 <li><a href="#">sweaters<span></span></a></li>
@@ -276,10 +285,10 @@
     <footer>
         <div class="container">
             <div class="row navbar ">
-                <div class="col-md-2 navbar-footer">
+                <div class="col-md-2 col-sm-2  navbar-footer text-left">
                     <a class="navbar-brand"><img src='img/logo.png' /></a>
                 </div>
-                <nav class="col-md-6 col-md-offset-1">
+                <nav class="col-md-6 col-sm-12 col-md-offset-1 ">
                     <ul class="nav navbar-nav ">
                         <li><a href="">home</a></li>
                         <li><a href="">catalog</a></li>
@@ -289,11 +298,11 @@
                         <li><a href="">contact</a></li>
                     </ul>
                 </nav>
-                <div class="col-md-3 copiright">
+                <div class="col-md-3 col-sm-12 copiright">
                     <div>
-                      <span >©2010 - 2016 All rights reserved</span>
+                        <span>©2010 - 2016 All rights reserved</span>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -337,6 +346,7 @@
         $('input[type="email"]').focusout(function () {
             $(this).val('Your Email Address');
         });
+
         var sum = 0;
        //добавление товаров в корзину
         $('.product').click(function () {
@@ -352,21 +362,34 @@
             $('.bag-product').prepend('<div class="one-product"></div>')
             $('.bag-product div:empty').append(imgProduct).append(nameProduct).append(priceProduct);
             sum = sum + operand;
-            $('.sum-form span').text('Suma: ' + sum + '$');
-
-            var c = 0;
-            $('.bag').click(function () {
-                if (c == 0) {
-                    $('.bag-product').show(300);
-                    c = 1;
-                } else {
-                    $('.bag-product').hide(300);
-                    c = 0;
-                }
-
-            });
+            writeSum(); 
         });
-    });
+
+        var c = 0;
+        $('.bag').click(function () {
+            if (c == 0) {
+                $('.bag-product').show(300);
+                c = 1;
+            } else {
+                $('.bag-product').hide(300);
+                c = 0;
+            }
+        });
+
+        $('button[type="reset"]').click(function () {
+            $('.one-product').remove();
+            $('.bag-product').hide(300);
+            $('.bag span').text('0');
+            sum = 0;
+            writeSum();
+        });
+            //функция выводит суму выбраных товаров
+        function writeSum() {
+            $('.sum-form span').text('Suma: ' + sum + '$');
+        };
+        });
+       
+   
     </script>
 
     <script src="js/bootstrap.js"></script>
