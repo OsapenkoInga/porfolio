@@ -365,6 +365,9 @@ footer .navbar-nav li:last-child{
     .nav > li > a{
         padding:10px;
     }
+	h1{
+		padding-top:50px;
+	}
     .catalog-menu .navbar-toggle{
         float:none;
     }
