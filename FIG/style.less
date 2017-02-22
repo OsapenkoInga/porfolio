@@ -221,6 +221,7 @@ header	table:hover{//стиль логотипа, при наведении мы
 					
 					}
 			}
+
  header ul li:nth-child(4) span{//сдвиг в лево текста в четвертом пункте меню
 					margin-left:-160px;
 				}
@@ -232,11 +233,30 @@ header	table:hover{//стиль логотипа, при наведении мы
 					color: @color_green;//при наведении пункт меню меняет цвет на зеленый
 					border-bottom:4px solid @color_green;//нижнее подчеркивание меняетсяна зеленое
 				}
-				}				
+				}
 
-				
-article{
-				
+ /*стиль иконки меню*/				
+ .ico-menu {
+    border-top: 6px @color_green solid;
+    border-bottom: 6px @color_green solid;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    margin:auto; 
+    display:none;  
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        width: 100%;
+        border-top: 6px @color_green solid;
+        margin-top: -3px;
+    }
+}					
+article{				
 			p{
 				float:left;
 				margin-top:0;
@@ -288,20 +308,12 @@ article section.menus{  //стиль секции menus
 					width:280px;
 					height:96px;
 					.green_border(@top:11px, @left:10px);//рамка вокруг картинки(невидимая)
-					margin-top:42px;
-					
-		
-				img{
-					
-					
-					}
+					margin-top:42px;				
 			}	
 			div:hover{opacity:0.5;}//при наведении мыши рамку становится видно
 			div:hover + a{background:@color_green;}//при наведении мыши на картинку  кнопка меняет цвет
 			a{
-					.button;//стиль кнопки
-					
-					
+				.button;//стиль кнопки					
 				img{
 						margin-top:30px;//размещение кнопки внутри кнопки-ссылки						
 					}
@@ -349,8 +361,7 @@ article section.about{ //описание секции about
 							.green_dotted;
 							.decoration(@decor:none);
 							}
-						}
-						
+						}						
 					}
 				}
 			ul{ //стиль списка-колонки 
@@ -395,8 +406,7 @@ article section.about{ //описание секции about
 							.text_decor(@color:@color_text, @style:italic, @size:0.55em );
 							}
 					margin-bottom:5px;		
-						}	
-				
+						}				
 				}
 	}
 article section.press{ //описание секции press
@@ -643,16 +653,13 @@ footer{//стиль подвала сайта
 							}
 						a{
 							.skipe
-						}	
-						
+						}							
 						}
 			p:nth-child(2){//стиль второго блока подвала
 				a{
 					.decoration(@decor:underline);
 				}
-			}
-		
-			
+			}			
 		}
 		div:last-child{
 				margin-left:25%;//розмещение социконок
@@ -685,8 +692,99 @@ footer{//стиль подвала сайта
 				}		
 		}
 @media only screen and (max-width: 970px) {
-   header,article,footer{
+   header,article,footer, article section.about,article section.press{
 	    width:98%;
 	}	
-}		
+   header ul {      
+       margin-top:20px;
+       width:100%;
+       float:right; 
+       text-align:center;
+       li{
+           display:inline-block;
+           vertical-align:top;
+       }     
+   }
+   article section.menus ul li:last-child {
+        float: left;
+        margin-right: 17px;
+        margin-top: 22px;
+   }
+   article section.about section> div{
+       width:60%;
+   }
+   article section.about ul{      
+       position:relative;
+       top:-180px;
+       left:50px;
+   }
+   article section.about section > div img{
+       width:100%;
+   }
+   article section.reservation p{
+       width:45%;
+       margin:10px 0;
+   }
+}
+@media only screen and (max-width:620px) {
+    header table{
+        float:none;
+        margin:auto;
+    }
+    nav{
+        margin-top:30px;
+        background:#69461a;
+        overflow:hidden;
+        padding:10px;
+    }
+    .ico-menu{
+        display:block;
+    }
+     header ul{
+           float:right;
+          display:none;
+       
+          li{               
+              overflow:hidden;              
+              width:100%;
+              margin-bottom:10px;
+              text-align:center;
+             
+              span{
+                  display:none;
+              }
+              a{
+                  float:none; 
+                  padding-right:0;
+                  display:inline-block;
+              }
+         }
+      }
+      article section.about section > div{
+       width:90%;
+       margin:auto;       
+       float:none;
+      
+   }   
+   article section.about section > div span{
+       clear:both;
+   }
+    article section.about ul{       
+       position:relative;
+       top:-50px;
+       left:0;
+       margin-top:0; 
+       margin:auto;        
+   }
+    article section.press > section{
+        display:none;
+    }
+    article section.press > div{
+        width:100%;
+    }
+       article section.reservation p{
+       width:100%;      
+   }       
+}	
+
 		

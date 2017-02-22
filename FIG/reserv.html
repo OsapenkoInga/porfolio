@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 	<meta charset='utf-8'/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>rezerv</title>
 	<link rel="stylesheet" type="text/css" href="style.css">	
 	<script src="js/less.js" ></script>	
@@ -22,29 +21,34 @@
 						  </tr>  
 					</table>
 				</a>
-				<ul><!--меню -->
-					<li><!--Пункт меню -->
-						<a href='menus.html'>menus </a>
-						<span>Dinner, dessert, wine & cocktails</span><!-- текст,который появляется при наведении мыши-->
-					</li>
-					<li>
-						<a href='about.html'>about </a>
-						<span>Chefs,people & passion</span>
-						</li>
-					<li>
-						<a href='press.html'> press </a>
-						<span>Events & press</span>
-					</li>
-					<li>
-						<a href='reserv.html'> reservations </a>
-						<span>Online & phone</span>
-					</li>
-					<li>
-						<a href='contact.html'> contact </a>
-						<span>Location, media & jobs</span>
-					</li>
-				</ul>
-			</header>
+                <nav>
+                    <div class="ico-menu"></div>
+                    <ul>
+                        <!--меню -->
+                        <li>
+                            <!--Пункт меню -->
+                            <a href='menus.html'>menus </a>
+                            <span>Dinner, dessert, wine & cocktails</span><!-- текст,который появляется при наведении мыши-->
+                        </li>
+                        <li>
+                            <a href='about.html'>about </a>
+                            <span>Chefs,people & passion</span>
+                        </li>
+                        <li>
+                            <a href='press.html'> press </a>
+                            <span>Events & press</span>
+                        </li>
+                        <li>
+                            <a href='reserv.html'> reservations </a>
+                            <span>Online & phone</span>
+                        </li>
+                        <li>
+                            <a href='contact.html'> contact </a>
+                            <span>Location, media & jobs</span>
+                        </li>
+                    </ul>
+                </nav>
+</header>
 			<article>
 				<section class='reservation'><!-- секция reservation-->
 					<p><!--одна из 3-х колонок(первая)-->
@@ -100,8 +104,10 @@
 								online reservation
 							</a>
 					</p>
-					<p> <!--одна из 3-х колонок(третья)-->
-							HOURS<!--название колонки-->
+                    <p>
+                        <!--одна из 3-х колонок(третья)-->
+                        HOURS<!--название колонки-->
+                    </p>	
 							<ul><!--спосок двохцветный-->
 								<li>Mon. 5:30PM - 10:30PM</li>
 								<li>Tues. 5:30PM - 10:30PM</li>
@@ -110,10 +116,9 @@
 								<li>Fri. 5:30PM - 11:00PM</li>
 								<li>Sat. 5:30PM - 11:00PM</li>
 								<li>Sun. Closed</li>
-								<li>Bar Opens at 5:00pm</li>
-								
+								<li>Bar Opens at 5:00pm</li>								
 							</ul>
-					</p>	
+					
 				</section>
 			</article>	
             <footer>
@@ -144,6 +149,20 @@
                 </div>
             </footer>	
 		</div>	
-		
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('.ico-menu').click(function () {
+                    $('nav ul').slideToggle(1000);
+
+                });
+                $(window).resize(function () {
+                    if ($(window).width() >= 620) {
+                        $('nav ul').removeAttr('style');
+                    };
+                });
+            });
+        </script>
 	</body>	
 </html>		

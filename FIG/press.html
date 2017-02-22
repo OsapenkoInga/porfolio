@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 	    <meta charset='utf-8'/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>press</title>
 	    <link rel="stylesheet" type="text/css" href="style.css">	
 	    <script src="js/less.js" ></script>	
@@ -13,38 +12,43 @@
 				<a href='index.html'> 
 					<table>  <!-- логотип, розмещен в таблице -->
 						  <tr>  
-							<td><img src='img/l1.png' alt="F" /></td>  <!-- изображения ,которые крутятся -->
-							<td><img src='img/l2.png' alt="I" /></td>  
-							<td><img src='img/l3.png' alt="G" /></td>  
+							<td><img src='IMG/l1.png' alt="F" /></td>  <!-- изображения ,которые крутятся -->
+							<td><img src='IMG/l2.png' alt="I" /></td>  
+							<td><img src='IMG/l3.png' alt="G" /></td>  
 						  </tr>  
 						  <tr> 
 							<td  colspan="3">food is good</td><!--текст,который увеличивается -->
 						  </tr>  
 					</table>
 				</a>
-				<ul><!--меню -->
-					<li><!--Пункт меню -->
-						<a href='menus.html'>menus </a>
-						<span>Dinner, dessert, wine & cocktails</span><!-- текст,который появляется при наведении мыши-->
-					</li>
-					<li>
-						<a href='about.html'>about </a>
-						<span>Chefs,people & passion</span>
-						</li>
-					<li>
-						<a href='press.html'> press </a>
-						<span>Events & press</span>
-					</li>
-					<li>
-						<a href='reserv.html'> reservations </a>
-						<span>Online & phone</span>
-					</li>
-					<li>
-						<a href='contact.html'> contact </a>
-						<span>Location, media & jobs</span>
-					</li>
-				</ul>
-			</header>
+                <nav>
+                    <div class="ico-menu"></div>
+                    <ul>
+                        <!--меню -->
+                        <li>
+                            <!--Пункт меню -->
+                            <a href='menus.html'>menus </a>
+                            <span>Dinner, dessert, wine & cocktails</span><!-- текст,который появляется при наведении мыши-->
+                        </li>
+                        <li>
+                            <a href='about.html'>about </a>
+                            <span>Chefs,people & passion</span>
+                        </li>
+                        <li>
+                            <a href='press.html'> press </a>
+                            <span>Events & press</span>
+                        </li>
+                        <li>
+                            <a href='reserv.html'> reservations </a>
+                            <span>Online & phone</span>
+                        </li>
+                        <li>
+                            <a href='contact.html'> contact </a>
+                            <span>Location, media & jobs</span>
+                        </li>
+                    </ul>
+                </nav>
+</header>
 			<article>
 			    <section class='press'><!-- секция сайта-->
 					<p>	OUR PRESS<!--название-->
@@ -256,6 +260,20 @@
 				</div>
 			</footer>	
 		</div>	
-		
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('.ico-menu').click(function () {
+                    $('nav ul').slideToggle(1000);
+
+                });
+                $(window).resize(function () {
+                    if ($(window).width() >= 620) {
+                        $('nav ul').removeAttr('style');
+                    };
+                });
+            });
+        </script>
 	</body>	
 </html>		
